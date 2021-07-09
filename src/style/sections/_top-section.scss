@@ -26,6 +26,63 @@
       object-fit: cover;
       object-position: 50% 0%;
     }
+    .int-board-1{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .tg1,.tg2,.tg3{
+      flex: 1 1 auto;
+      width: 33%;
+    }
+    .tg2{
+      // screen_dickbutt_animation_v02.gif
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .anime-wrapper{
+        width: 52%;
+        margin-bottom: 1vw;
+        .anime-asp-box{
+          position: relative;
+          width: 100%;
+          padding-bottom: 100%;
+        }
+        .tg2-anime{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: 50% 50%;
+        }
+      }     
+
+      .anime-wrapper2{
+        width: 40%;
+        .anime-asp-box{
+          position: relative;
+          width: 100%;
+          padding-bottom: 26%;
+        }
+        .tg2-anime{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: 50% 50%;
+        }
+      }      
+    }
   }
   .game-bottom{  
     position: relative;
@@ -65,15 +122,27 @@
       width: 41%;  
       .img-box{
         position: absolute;
-        top: 56%;
-        right: 0;
-        transform: translate(0,-50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        height: 71%;         
+      }
+      .img-asp-box{
+        position: relative;
+        top: 50%;
+        left: 54%;
+        transform: translate(-50%, -50%);
         width: 108%;
-        height: 74%;         
+        margin: 0 auto;
+        padding-bottom: 40%;
       }
       .g1-img{
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 100%;
+        height: 100%;   
         object-fit: cover;
         object-position: 100% 50%;
       }
