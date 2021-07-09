@@ -4,9 +4,11 @@
   }
   .game-top{        
     position: relative;
-    height: 44vw;
+    // height: 44vw;
+    height: 25vw;
     @media screen and (min-width: 1440px){
-      height: 634px;
+      // height: 634px;
+      height: 360px;
     }
     // @include breakpoint(xxl){
     //   height: 845px;
