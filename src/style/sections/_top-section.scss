@@ -47,20 +47,55 @@
       .lblock-item{
         flex: 1 1 auto;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
       }        
     }
     .tg1-1{
       height: 20%;
-      background-color: #f00;
-    }
-    .tg1-3{
-      height: 62%;
-      background-color: #f0f;
-    }
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .anime-wrapper{
+        flex: 0 1 auto;
+        width: 56%;
+        .anime-asp-box{
+          position: relative;
+          width: 100%;
+          padding-bottom: 26%;
+        }
+        .tg1-1-anime{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: 50% 50%;
+        }
+      } 
+      .sign-wrapper{
+        flex: 0 1 auto;
+        width: 18%;
+        .sign-asp-box{
+          position: relative;
+          width: 100%;
+          padding-bottom: 100%;
+        }
+        .sign-anime{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;   
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+      }
+    }    
     .tg1-2{
       height: 18%;
+      padding: 0 2vw;
       .btn-wrapper{
         width: 20%;
       }
@@ -92,7 +127,28 @@
           transform: translateY(-18%);
         }            
       }
-    }    
+    } 
+    .tg1-3{
+      height: 62%;
+      .btn-wrapper{
+        width: 90%;
+      }
+      .btn-asp-box{
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 100%;
+      }
+      .tg1-3-anime{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: 50% 50%;
+      }
+    }   
     .tg2{
       // screen_dickbutt_animation_v02.gif
       display: flex;
