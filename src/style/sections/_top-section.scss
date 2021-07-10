@@ -6,11 +6,12 @@
     position: relative;
     height: 44vw;
     @media screen and (min-width: 1440px){
-      height: 25vw;
+      // height: 25vw;
+      height: 633px;
     }
-    @include breakpoint(xxl){
-      height: 480px;
-    } 
+    // @include breakpoint(xxl){
+    //   height: 480px;
+    // } 
     .img-box-bg{
       position: absolute;
       top: 0;
@@ -23,11 +24,12 @@
       background-size: cover;   
       background-image: url('/src/static/img/background_TopSection_medium.png');
       @media screen and (min-width: 1440px){
-        background-image: url('/src/static/img/background_TopSection_large.png');
-      }
-      @include breakpoint(xxl){
+        background-image: url('/src/static/img/background_TopSection_medium.png');
         background-size: 100% 100%;
       }
+      // @include breakpoint(xxl){
+      //   background-size: 100% 100%;
+      // }
     }  
     .game-bg-top{     
       width: 100%;
@@ -68,9 +70,9 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      @media screen and (min-width: 1440px){
-        height: 25%;
-      }
+      // @media screen and (min-width: 1440px){
+      //   height: 25%;
+      // }
       .anime-wrapper{
         flex: 0 1 auto;
         width: 62%;
@@ -92,9 +94,9 @@
       .sign-wrapper{
         flex: 0 1 auto;
         width: 18%;
-        @media screen and (min-width: 1440px){
-          width: 14%;
-        }        
+        // @media screen and (min-width: 1440px){
+        //   width: 14%;
+        // }        
         .sign-asp-box{
           position: relative;
           width: 100%;
@@ -119,14 +121,14 @@
     .tg1-2{
       height: 18%;
       padding: 0 6%;
-      @media screen and (min-width: 1440px){
-        height: 20%;
-      }
+      // @media screen and (min-width: 1440px){
+      //   height: 20%;
+      // }
       .btn-wrapper{
         width: 20%;
-        @media screen and (min-width: 1440px){
-          width: 15%;
-        }        
+        // @media screen and (min-width: 1440px){
+        //   width: 15%;
+        // }        
       }
       .btn-asp-box{
         position: relative;
@@ -149,7 +151,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
-        transition: background-image 0s linear 0.05s, transform 0s linear 0.05s;
+        transition: background-image 0s linear 0.1s, transform 0s linear 0.1s;
         background-image: url('/src/static/img/switch_toggle_02.png');
         &:active,&.active{
           // background: url('/src/static/img/mainButton_pressed.png') no-repeat 50% 100% / 100% auto;
@@ -160,14 +162,14 @@
     } 
     .tg1-3{
       height: 62%;
-      @media screen and (min-width: 1440px){
-        height: 55%;
-      }
+      // @media screen and (min-width: 1440px){
+      //   height: 55%;
+      // }
       .anime-wrapper{
         width: 90%;
-        @media screen and (min-width: 1440px){
-          width: 50%;
-        } 
+        // @media screen and (min-width: 1440px){
+        //   width: 50%;
+        // } 
       }
       .anime-asp-box{
         position: relative;
@@ -194,9 +196,9 @@
       position: relative;
       .anime-wrapper{
         width: 93%;
-        @media screen and (min-width: 1440px){
-          width: 55%;
-        }
+        // @media screen and (min-width: 1440px){
+        //   width: 55%;
+        // }
         // width: 56%;
         margin-bottom: 0.2vw;
         .anime-asp-box{
@@ -248,14 +250,14 @@
       justify-content: flex-end;
       align-items: flex-end;
       height: 16%;
-      @media screen and (min-width: 1440px){
-        height: 21%;
-      }
+      // @media screen and (min-width: 1440px){
+      //   height: 21%;
+      // }
       .btn-wrapper{
         width: 48%;
-        @media screen and (min-width: 1440px){
-          width: 40%;
-        }
+        // @media screen and (min-width: 1440px){
+        //   width: 40%;
+        // }
       }
       .btn-asp-box{
         position: relative;
@@ -279,7 +281,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
-        transition: background-image 0s linear 0.05s;
+        transition: background-image 0s linear 0.1s;
         &:hover{
           // background: url('/src/static/img/mainButton_hover.png') no-repeat 50% 100% / 100% auto;
           background-image: url('/src/static/img/button_connect_hover.png');
@@ -296,9 +298,9 @@
       display: flex;
       justify-content: center;
       align-items: stretch;
-      @media screen and (min-width: 1440px){
-        height: 62%;
-      }
+      // @media screen and (min-width: 1440px){
+      //   height: 62%;
+      // }
       .tg3-2-1{
         flex: 1 1 auto;
         width: 25%;
@@ -309,9 +311,9 @@
         .sign-wrapper{
           flex: 0 1 auto;
           width: 88%;
-          @media screen and (min-width: 1440px){
-            width: 55%;
-          }
+          // @media screen and (min-width: 1440px){
+          //   width: 55%;
+          // }
           .sign-asp-box{
             position: relative;
             width: 100%;
@@ -357,9 +359,9 @@
         .sign-wrapper{
           flex: 0 1 auto;
           width: 95%;
-          @media screen and (min-width: 1440px){
-            width: 77%;
-          }
+          // @media screen and (min-width: 1440px){
+          //   width: 77%;
+          // }
         }
         .sign-asp-box{
           position: relative;
@@ -387,15 +389,15 @@
           }
           &.sign-3{
             background-image: url('/src/static/img/banner_text.png');            
-          }
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 1.6vw;
+          }          
+          font-size: 1.4vw;
           @media screen and (min-width: 1440px){
-            font-size: 1.4vw;
+            // font-size: 1.2vw;
+            font-size: 20px;
           }
-          @include breakpoint(xxl){
-            font-size: 27px;
-          }  
+          // @include breakpoint(xxl){
+          //   font-size: 23px;
+          // }  
           font-weight: 700;
           color: #eee;
         }        
@@ -409,9 +411,9 @@
         align-items: center;
         .btn-wrapper{
           width: 88%;
-          @media screen and (min-width: 1440px){
-            width: 72%;
-          }
+          // @media screen and (min-width: 1440px){
+          //   width: 72%;
+          // }
           &:not(:last-child){
             margin-bottom: 12%;
           }
@@ -436,7 +438,7 @@
           background-repeat: no-repeat;
           background-position: 50% 50%;
           background-size: contain;
-          transition: background-image 0s linear 0.05s;
+          transition: background-image 0s linear 0.1s;
           &.btn-egg{
             background-image: url('/src/static/img/button_egg.png');
             &:hover{              
@@ -462,14 +464,14 @@
       height: 19%;
       justify-content: flex-start;
       align-items: center;
-      @media screen and (min-width: 1440px){
-        height: 17%;
-      }
+      // @media screen and (min-width: 1440px){
+      //   height: 17%;
+      // }
       .disc-wrapper{
         width: 93%;
-        @media screen and (min-width: 1440px){
-          width: 77%;
-        }
+        // @media screen and (min-width: 1440px){
+        //   width: 77%;
+        // }
       }
       .disc-asp-box{
         position: relative;
@@ -492,11 +494,12 @@
     position: relative;
     height: 24vw;
     @media screen and (min-width: 1440px){
-      height: 19vw;
+      // height: 19vw;
+      height: 346px;
     }
-    @include breakpoint(xxl){
-      height: 365px;
-    }  
+    // @include breakpoint(xxl){
+    //   height: 365px;
+    // }  
     .img-box-bg{
       position: absolute;
       top: 0;
@@ -510,10 +513,11 @@
       background-image: url('/src/static/img/background_MidSection_medium.png'); 
       @media screen and (min-width: 1440px){
         background-image: url('/src/static/img/background_MidSection_large.png'); 
-      } 
-      @include breakpoint(xxl){
         background-size: 100% 100%;
-      }   
+      } 
+      // @include breakpoint(xxl){
+      //   background-size: 100% 100%;
+      // }   
     }
     .game-bg-medium{
       width: 100%;
@@ -532,9 +536,9 @@
       align-items: stretch;
       max-width: $game-content;
       margin: 0 auto;
-      @media screen and (min-width: 1440px){
-        height: 73%;
-      } 
+      // @media screen and (min-width: 1440px){
+      //   height: 73%;
+      // } 
     } 
     .g1{
       flex: 1 1 auto;
@@ -556,11 +560,11 @@
         width: 108%;
         margin: 0 auto;
         padding-bottom: 40%;
-        @media screen and (min-width: 1440px){
-          left: 20%;
-          width: 70%;
-          padding-bottom: 26%;
-        }
+        // @media screen and (min-width: 1440px){
+        //   left: 20%;
+        //   width: 70%;
+        //   padding-bottom: 26%;
+        // }
       }
       .g1-img{
         position: absolute;
@@ -596,6 +600,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        transform: translate(0,-7%);
         width: 100%;
         height: 100%;        
         background-color: transparent;
@@ -604,7 +609,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
-        transition: background-image 0s linear 0.05s;
+        transition: background-image 0s linear 0.1s;
         &:hover{
           // background: url('/src/static/img/mainButton_hover.png') no-repeat 50% 100% / 100% auto;
           background-image: url('/src/static/img/mainButton_hover.png');
@@ -647,7 +652,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
-        transition: background-image 0s linear 0.05s;
+        transition: background-image 0s linear 0.1s;
         &.t1{
           background-image: url('/src/static/img/rockerSwitch_green_02.png');
           &:active,&.active{
@@ -669,11 +674,12 @@
     position: relative;
     height: 41vw;
     @media screen and (min-width: 1440px){
-      height: 31vw;
+      // height: 31vw;
+      height: 446px;
     }
-    @include breakpoint(xxl){
-      height: 595px;
-    }  
+    // @include breakpoint(xxl){
+    //   height: 595px;
+    // }  
     .img-box-bg{
       position: absolute;
       top: 0;
@@ -687,10 +693,11 @@
       background-image: url('/src/static/img/background_bottomSection_medium.png');   
       @media screen and (min-width: 1440px){
         background-image: url('/src/static/img/background_bottomSection_large.png');  
-      }  
-      @include breakpoint(xxl){
         background-size: 100% 100%;
-      }
+      }  
+      // @include breakpoint(xxl){
+      //   background-size: 100% 100%;
+      // }
     }
   }
 }
