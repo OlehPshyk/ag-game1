@@ -151,6 +151,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
+        will-change: background-image;
         transition: background-image 0s linear 0.02s, transform 0s linear 0.02s;
         background-image: url('/src/static/img/switch_toggle_02.png');
         &:active,&.active{
@@ -281,6 +282,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
+        will-change: background-image;
         transition: background-image 0s linear 0.02s;
         &:hover{
           // background: url('/src/static/img/mainButton_hover.png') no-repeat 50% 100% / 100% auto;
@@ -438,6 +440,7 @@
           background-repeat: no-repeat;
           background-position: 50% 50%;
           background-size: contain;
+          will-change: background-image;
           transition: background-image 0s linear 0.02s;
           &.btn-egg{
             background-image: url('/src/static/img/button_egg.png');
@@ -609,6 +612,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
+        will-change: background-image;
         transition: background-image 0s linear 0.02s;
         &:hover{
           // background: url('/src/static/img/mainButton_hover.png') no-repeat 50% 100% / 100% auto;
@@ -635,7 +639,7 @@
         position: relative;
         width: 80%;
         margin: 0 auto;
-        padding-bottom: 100%;
+        padding-bottom: 102%;
       }
       .g3-btn{
         @include outline(0);
@@ -652,6 +656,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
+        will-change: background-image;
         transition: background-image 0s linear 0.02s;
         &.t1{
           background-image: url('/src/static/img/rockerSwitch_green_02.png');
