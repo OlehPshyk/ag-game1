@@ -151,7 +151,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
-        transition: background-image 0s linear 0.1s, transform 0s linear 0.1s;
+        transition: background-image 0s linear 0.02s, transform 0s linear 0.02s;
         background-image: url('/src/static/img/switch_toggle_02.png');
         &:active,&.active{
           // background: url('/src/static/img/mainButton_pressed.png') no-repeat 50% 100% / 100% auto;
@@ -281,7 +281,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
-        transition: background-image 0s linear 0.1s;
+        transition: background-image 0s linear 0.02s;
         &:hover{
           // background: url('/src/static/img/mainButton_hover.png') no-repeat 50% 100% / 100% auto;
           background-image: url('/src/static/img/button_connect_hover.png');
@@ -438,7 +438,7 @@
           background-repeat: no-repeat;
           background-position: 50% 50%;
           background-size: contain;
-          transition: background-image 0s linear 0.1s;
+          transition: background-image 0s linear 0.02s;
           &.btn-egg{
             background-image: url('/src/static/img/button_egg.png');
             &:hover{              
@@ -609,7 +609,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
-        transition: background-image 0s linear 0.1s;
+        transition: background-image 0s linear 0.02s;
         &:hover{
           // background: url('/src/static/img/mainButton_hover.png') no-repeat 50% 100% / 100% auto;
           background-image: url('/src/static/img/mainButton_hover.png');
@@ -652,7 +652,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto;
-        transition: background-image 0s linear 0.1s;
+        transition: background-image 0s linear 0.02s;
         &.t1{
           background-image: url('/src/static/img/rockerSwitch_green_02.png');
           &:active,&.active{
