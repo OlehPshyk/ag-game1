@@ -150,13 +150,11 @@
         // background: url('/src/static/img/mainButton_Default.png') no-repeat 50% 100% / 100% auto;        
         background-repeat: no-repeat;
         background-position: 50% 100%;
-        background-size: 100% auto;
-        will-change: background-image;
-        transition: background-image 0s linear 0.02s, transform 0s linear 0.02s;
-        background-image: url('/src/static/img/switch_toggle_02.png');
-        &:active,&.active{
-          // background: url('/src/static/img/mainButton_pressed.png') no-repeat 50% 100% / 100% auto;
-          background-image: url('/src/static/img/switch_toggle_01.png');
+        background-size: 100% auto, 0% 0%;
+        will-change: background-image, background-size;        
+        background-image: url('/src/static/img/switch_toggle_02.png'),url('/src/static/img/switch_toggle_01.png');
+        &:active,&.active{          
+          background-size: 0% 0%, 100% auto;
           transform: translateY(-18%);
         }            
       }
@@ -278,19 +276,16 @@
         height: 100%;        
         background-color: transparent;
         // background: url('/src/static/img/mainButton_Default.png') no-repeat 50% 100% / 100% auto;
-        background-image: url('/src/static/img/button_connect.png');
+        background-image: url('/src/static/img/button_connect.png'), url('/src/static/img/button_connect_hover.png'), url('/src/static/img/button_connect_pressed.png');
         background-repeat: no-repeat;
         background-position: 50% 100%;
-        background-size: 100% auto;
-        will-change: background-image;
-        transition: background-image 0s linear 0.02s;
+        background-size: 100% auto, 0% 0%, 0% 0%;
+        will-change: background-image, background-size;
         &:hover{
-          // background: url('/src/static/img/mainButton_hover.png') no-repeat 50% 100% / 100% auto;
-          background-image: url('/src/static/img/button_connect_hover.png');
+          background-size: 0% 0%, 100% auto, 0% 0%;
         }
         &:active,&.active{
-          // background: url('/src/static/img/mainButton_pressed.png') no-repeat 50% 100% / 100% auto;
-          background-image: url('/src/static/img/button_connect_pressed.png');
+          background-size: 0% 0%, 0% 0%, 100% auto;
         }
       }
     }
@@ -439,25 +434,24 @@
           background-color: transparent;          
           background-repeat: no-repeat;
           background-position: 50% 50%;
-          background-size: contain;
-          will-change: background-image;
-          transition: background-image 0s linear 0.02s;
+          background-size: contain, 0% 0%, 0% 0%;
+          will-change: background-image, background-size;
           &.btn-egg{
-            background-image: url('/src/static/img/button_egg.png');
+            background-image: url('/src/static/img/button_egg.png'), url('/src/static/img/button_egg_hover.png'), url('/src/static/img/button_egg_pressed.png');
             &:hover{              
-              background-image: url('/src/static/img/button_egg_hover.png');
+              background-size: 0% 0%, contain, 0% 0%;              
             }
             &:active,&.active{              
-              background-image: url('/src/static/img/button_egg_pressed.png');
+              background-size: 0% 0%, 0% 0%, contain; 
             }
           } 
           &.btn-skull{
-            background-image: url('/src/static/img/button_skull.png');
+            background-image: url('/src/static/img/button_skull.png'), url('/src/static/img/button_skull_hover.png'), url('/src/static/img/button_skull_pressed.png');            
             &:hover{              
-              background-image: url('/src/static/img/button_skull_hover.png');
+              background-size: 0% 0%, contain, 0% 0%;              
             }
             &:active,&.active{              
-              background-image: url('/src/static/img/button_skull_pressed.png');
+              background-size: 0% 0%, 0% 0%, contain; 
             }
           }          
         }
@@ -608,19 +602,16 @@
         height: 100%;        
         background-color: transparent;
         // background: url('/src/static/img/mainButton_Default.png') no-repeat 50% 100% / 100% auto;
-        background-image: url('/src/static/img/mainButton_Default.png');
+        background-image: url('/src/static/img/mainButton_Default.png'),url('/src/static/img/mainButton_hover.png'),url('/src/static/img/mainButton_pressed.png');
         background-repeat: no-repeat;
         background-position: 50% 100%;
-        background-size: 100% auto;
-        will-change: background-image;
-        transition: background-image 0s linear 0.02s;
-        &:hover{
-          // background: url('/src/static/img/mainButton_hover.png') no-repeat 50% 100% / 100% auto;
-          background-image: url('/src/static/img/mainButton_hover.png');
+        background-size: 100% auto, 0% 0%, 0% 0%;
+        will-change: background-size, background-image;
+        &:hover{          
+          background-size: 0% 0%, 100% auto, 0% 0%;
         }
-        &:active,&.active{
-          // background: url('/src/static/img/mainButton_pressed.png') no-repeat 50% 100% / 100% auto;
-          background-image: url('/src/static/img/mainButton_pressed.png');
+        &:active,&.active{          
+          background-size: 0% 0%, 0% 0%, 100% auto;
         }        
       }
     } 
@@ -655,21 +646,18 @@
         // background: url('/src/static/img/mainButton_Default.png') no-repeat 50% 100% / 100% auto;        
         background-repeat: no-repeat;
         background-position: 50% 100%;
-        background-size: 100% auto;
-        will-change: background-image;
-        transition: background-image 0s linear 0.02s;
+        background-size: 100% auto, 0% 0%;
+        will-change: background-image, background-size;        
         &.t1{
-          background-image: url('/src/static/img/rockerSwitch_green_02.png');
+          background-image: url('/src/static/img/rockerSwitch_green_02.png'),url('/src/static/img/rockerSwitch_green_01.png');
           &:active,&.active{
-            // background: url('/src/static/img/mainButton_pressed.png') no-repeat 50% 100% / 100% auto;
-            background-image: url('/src/static/img/rockerSwitch_green_01.png');
+            background-size: 0% 0%, 100% auto;    
           }
         }
         &.t2{
-          background-image: url('/src/static/img/rockerSwitch_blue_02.png');
+          background-image: url('/src/static/img/rockerSwitch_blue_02.png'),url('/src/static/img/rockerSwitch_blue_01.png');
           &:active,&.active{
-            // background: url('/src/static/img/mainButton_pressed.png') no-repeat 50% 100% / 100% auto;
-            background-image: url('/src/static/img/rockerSwitch_blue_01.png');
+            background-size: 0% 0%, 100% auto; 
           }
         }        
       }
