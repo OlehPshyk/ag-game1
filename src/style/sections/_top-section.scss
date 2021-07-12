@@ -708,11 +708,7 @@
         margin: 0 auto;
         padding-bottom: 100%;
       }
-      .g3-btn{
-        @include outline(0);
-        cursor: pointer;
-        border: none;
-        padding: 0;
+      .g3-btn{        
         position: absolute;
         top: 0;
         left: 0;        
@@ -722,8 +718,9 @@
         // background: url('/src/static/img/mainButton_Default.png') no-repeat 50% 100% / 100% auto;        
         background-repeat: no-repeat;
         background-position: 0% 100%;
-        background-size: 120% auto, 0% 0%;
-        will-change: background-image, background-size;        
+        background-size: 120% auto, 0% 0%;        
+        will-change: background-image, background-size; 
+        pointer-events: none;       
         &.t1{
           background-image: url('/src/static/img/switch_blue_02.png'),url('/src/static/img/switch_blue_01.png');
           &:active,&.active{
@@ -771,7 +768,21 @@
           &:active,&.active{
             background-size: 0% 0%, 120% auto;  
           }
-        }        
+        } 
+        .g3-btn-clip{
+          @include outline(0);
+          pointer-events: auto;
+          cursor: pointer;
+          border: none;
+          padding: 0;
+          position: absolute;
+          top: 0;
+          left: 0;        
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          clip-path: polygon(15% 16%, 53% 16%, 68% 42%, 78% 69%, 81% 87%, 35% 85%, 15% 44%);
+        }       
       }
     }   
   }
