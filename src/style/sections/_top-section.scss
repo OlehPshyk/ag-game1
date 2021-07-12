@@ -637,7 +637,7 @@
           background-size: 0% 0%, 100% auto, 0% 0%;
           +.popup-text-wrapper{
             opacity: 1;
-            transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
           }
         }
         &:active,&.active{          
@@ -655,7 +655,7 @@
         left: 0%;
         width: 88%;
         pointer-events: none;
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
         .popup-text-asp-box{
           position: absolute;
           top: 0;
