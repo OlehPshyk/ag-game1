@@ -1,0 +1,25 @@
+.btn-modal-close{
+  @include outline(0);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  position: absolute;    
+  width: 60px;
+  height: 60px;  
+  z-index: 5;
+  top: 26px;
+  right: 40px;        
+  background-color: transparent;
+  // background: url('/src/static/img/mainButton_Default.png') no-repeat 50% 100% / 100% auto;
+  background-image: url('/src/static/img/btn_close_default.png'), url('/src/static/img/btn_close_hover.png'), url('/src/static/img/btn_close_pressed.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain, 0% 0%, 0% 0%;
+  will-change: background-image, background-size;
+  &:hover{
+    background-size: 0% 0%, contain, 0% 0%;
+  }
+  &:active,&.active{
+    background-size: 0% 0%, 0% 0%, contain;
+  }
+}

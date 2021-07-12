@@ -9,7 +9,7 @@ const modalJs = () => {
     page: 'body',
     loadClass: 'vanilla-modal',
     class: 'modal-visible',
-    clickOutside: false,
+    clickOutside: true,
     closeKeys: [27],
     transitions: true,
     onBeforeOpen: null,

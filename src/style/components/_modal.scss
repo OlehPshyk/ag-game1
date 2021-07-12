@@ -2,3 +2,53 @@ body.vanilla-modal .modal-hider {
   position: absolute;
   left: -99999em;
 }
+
+body.vanilla-modal{
+  &.modal-visible{
+    .modal{
+      opacity: 1;
+      z-index: 10;      
+      transition: opacity 0.8s, z-index 0s 0s; 
+    }
+  }
+  .modal{
+    opacity: 0;
+    z-index: -1;
+    background-color: rgba(0,0,0,0.8);
+    transition: opacity 0.8s, z-index 0s 0.8s;        
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // height: 100%;
+    min-height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+  }  
+  .modal-inner{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  .modal-content{    
+    width: 100%;
+    height: 100%;
+  }
+  // .btn-modal-close{}  
+}
+ 
+.popup-1{
+  padding: 0;
+  position: relative;
+  width: 600px; 
+  height: 400px;   
+  background-image: url('/src/static/img/popup.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+// popup.png

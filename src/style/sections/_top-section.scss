@@ -718,55 +718,55 @@
         // background: url('/src/static/img/mainButton_Default.png') no-repeat 50% 100% / 100% auto;        
         background-repeat: no-repeat;
         background-position: 0% 100%;
-        background-size: 120% auto, 0% 0%;        
+        background-size: 100% auto, 0% 0%;        
         will-change: background-image, background-size; 
         pointer-events: none;       
         &.t1{
-          background-image: url('/src/static/img/switch_blue_02.png'),url('/src/static/img/switch_blue_01.png');
+          background-image: url('/src/static/img/switch_red_02.png'),url('/src/static/img/switch_red_01.png');
           &:active,&.active{
-            background-size: 0% 0%, 120% auto;    
+            background-size: 0% 0%, 100% auto;    
           }
         }
         &.t2{
-          background-image: url('/src/static/img/switch_orange_02.png'),url('/src/static/img/switch_blue_01.png');
+          background-image: url('/src/static/img/switch_orange_02.png'),url('/src/static/img/switch_orange_01.png');
           &:active,&.active{
-            background-size: 0% 0%, 120% auto;
+            background-size: 0% 0%, 100% auto;
           }
         }  
         &.t3{
           background-image: url('/src/static/img/switch_yellow_02.png'),url('/src/static/img/switch_yellow_01.png');
           &:active,&.active{
-            background-size: 0% 0%, 120% auto;    
+            background-size: 0% 0%, 100% auto;    
           }
         }
         &.t4{
           background-image: url('/src/static/img/switch_blue_02.png'),url('/src/static/img/switch_blue_01.png');
           &:active,&.active{
-            background-size: 0% 0%, 120% auto;  
+            background-size: 0% 0%, 100% auto;  
           }
         }         
         &.t5{
           background-image: url('/src/static/img/switch_blue_02.png'),url('/src/static/img/switch_blue_01.png');
           &:active,&.active{
-            background-size: 0% 0%, 120% auto;      
+            background-size: 0% 0%, 100% auto;      
           }
         }
         &.t6{
           background-image: url('/src/static/img/switch_blue_02.png'),url('/src/static/img/switch_blue_01.png');
           &:active,&.active{
-            background-size: 0% 0%, 120% auto;  
+            background-size: 0% 0%, 100% auto;  
           }
         }  
         &.t7{
           background-image: url('/src/static/img/switch_purple_02.png'),url('/src/static/img/switch_purple_01.png');
           &:active,&.active{
-            background-size: 0% 0%, 120% auto;    
+            background-size: 0% 0%, 100% auto;    
           }
         }
         &.t8{
           background-image: url('/src/static/img/switch_pink_02.png'),url('/src/static/img/switch_pink_01.png');
           &:active,&.active{
-            background-size: 0% 0%, 120% auto;  
+            background-size: 0% 0%, 100% auto;  
           }
         } 
         .g3-btn-clip{
@@ -781,7 +781,7 @@
           width: 100%;
           height: 100%;
           background-color: transparent;
-          clip-path: polygon(15% 16%, 53% 16%, 68% 42%, 78% 69%, 81% 87%, 35% 85%, 15% 44%);
+          clip-path: polygon(18% 9%, 58% 9%, 68% 39%, 84% 58%, 84% 82%, 41% 82%, 18% 38%);
         }       
       }
     }   
