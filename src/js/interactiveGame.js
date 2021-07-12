@@ -10,7 +10,6 @@ const interactiveGame = () => {
 
   // MEDIUM
   const g2Btn = document.querySelector('.js-g2-btn');
-  console.log("g2Btn:",g2Btn);
   const toggleG2BtnHover  = () => {
     g2Btn.classList.toggle('hover');
   }
