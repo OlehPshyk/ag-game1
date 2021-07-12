@@ -14,8 +14,8 @@ const interactiveGame = () => {
   // Default oscillator wave is sawtooth
   // synth.setOscWave(0); // Sine Wave
   // synth.setOscWave(1); // Square Wave
-  synth.setOscWave(2); // Sawtooth Wave
-  // synth.setOscWave(3); // Triangle Wave
+  // synth.setOscWave(2); // Sawtooth Wave
+  synth.setOscWave(3); // Triangle Wave
   const resolveGameMedium = (event) => {    
     const g3Btn = event.target.closest('[data-id="g3-btn"]');
     if(g3Btn){ 
@@ -34,7 +34,7 @@ const interactiveGame = () => {
       // Set filter envelope modulation amount
       synth.setFilterEnvMod(0.8);
       // Set filter attack time
-      synth.setFilterAttackTime(0.6);      
+      synth.setFilterAttackTime(0.9);      
     }
   }  
   document.querySelector('.js-game-medium').addEventListener('click', resolveGameMedium);
