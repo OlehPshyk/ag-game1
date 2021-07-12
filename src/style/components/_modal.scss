@@ -43,12 +43,56 @@ body.vanilla-modal{
 .popup-1{
   padding: 0;
   position: relative;
-  width: 600px; 
-  height: 400px;   
+  width: 300px; 
+  height: 207px; 
+  @include breakpoint(sm){
+    width: 500px; 
+    height: 208px;   
+  }
+  @include breakpoint(md){
+    width: 600px; 
+    height: 415px;   
+  }
   background-image: url('/src/static/img/popup.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
 }
+.btn-popup-1-close{
+  @include outline(0);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  position: absolute; 
+  z-index: 5;
+  width: 40px;
+    height: 40px;
+    top: 12px;
+    right: 12px;
+  @include breakpoint(sm){
+    width: 40px;
+    height: 40px;
+    top: 12px;
+    right: 20px;
+  }
+  @include breakpoint(md){
+    width: 60px;
+    height: 60px;
+    top: 26px;
+    right: 40px;
+  }
 
-// popup.png
+  background-color: transparent;
+  // background: url('/src/static/img/mainButton_Default.png') no-repeat 50% 100% / 100% auto;
+  background-image: url('/src/static/img/btn_close_default.png'), url('/src/static/img/btn_close_hover.png'), url('/src/static/img/btn_close_pressed.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain, 0% 0%, 0% 0%;
+  will-change: background-image, background-size;
+  &:hover{
+    background-size: 0% 0%, contain, 0% 0%;
+  }
+  &:active,&.active{
+    background-size: 0% 0%, 0% 0%, contain;
+  }
+}

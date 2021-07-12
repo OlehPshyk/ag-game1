@@ -33,6 +33,10 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        // options: {
+        //   cacheCompression: false,
+        //   compact: false,
+        // }       
       },
       {
         test: /\.html$/,
