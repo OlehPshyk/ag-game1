@@ -58,5 +58,8 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "vanilla-modal": "^1.6.5"
+  }
 }
