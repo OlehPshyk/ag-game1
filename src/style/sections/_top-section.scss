@@ -635,11 +635,49 @@
         will-change: background-size, background-image;
         &:hover{          
           background-size: 0% 0%, 100% auto, 0% 0%;
+          +.popup-text-wrapper{
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+          }
         }
         &:active,&.active{          
           background-size: 0% 0%, 0% 0%, 100% auto;
+          +.popup-text-wrapper{
+            opacity: 0;
+            transition: opacity 0s ease-in-out;
+          }
         }        
       }
+      .popup-text-wrapper{
+        opacity: 0;
+        position: absolute;
+        top: -42%;
+        left: 0%;
+        width: 88%;
+        pointer-events: none;
+        transition: opacity 0.4s ease-in-out;
+        .popup-text-asp-box{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding-bottom: 50%;
+        }
+        .popup-text{  
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: transparent;
+          background-image: url('/src/static/img/launch_text.png');
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 100% auto;          
+          will-change: background-image;
+        }
+      }
+
     } 
     .g3{
       flex: 1 1 auto;
