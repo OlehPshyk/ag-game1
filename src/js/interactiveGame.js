@@ -19,8 +19,12 @@ const interactiveGame = () => {
   const resolveGameMedium = (event) => {    
     const g3Btn = event.target.closest('[data-id="g3-btn"]');
     if(g3Btn){ 
+      // function(MIDINote, amplitude, filterOffset, currentTime)
+      // synth.playNote(69, 1.0, 1.0, 0);
       // Turn up stereo delay
       synth.setDelayFeedback(0.1);
+      // Set delay time to tempo
+      synth.setDelayTimeTempo(110, 0.25);
       // (MIDINote, amplitude, filterOffset, currentTime)         
       synth.playNote(synth.noteToMIDI(g3Btn.dataset.note||'C', 4), 1.0, 1.0, 0);   
       // Set filter cuttoff
