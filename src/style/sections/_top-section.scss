@@ -611,7 +611,7 @@
           position: relative;
           width: 100%;
           margin: 0 auto;
-          padding-bottom: 90%;
+          padding-bottom: 80%;
         }
       }      
       .g2-btn{
@@ -622,7 +622,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        transform: translate(-4%,-19%);
+        transform: translate(-4%,-15%);
         width: 100%;
         height: 100%;        
         background-color: transparent;
@@ -631,6 +631,7 @@
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto, 0% 0%, 0% 0%;
+        clip-path: polygon(0% 25%,15% 8%,25% 4%,50% 0%,75% 4%,85% 8%, 100% 25%,100% 76%,85% 92%,15% 92%, 0% 76%);
         will-change: background-size, background-image;
         &:hover{          
           background-size: 0% 0%, 100% auto, 0% 0%;
