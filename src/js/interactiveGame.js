@@ -1,4 +1,5 @@
 const interactiveGame = () => {  
+  // TOP
   const resolveGameTop = (event) => {
     const tg1Btn = event.target.closest('[data-id="tg1-btn"]');    
     if(tg1Btn){
@@ -6,6 +7,16 @@ const interactiveGame = () => {
     }    
   }
   document.querySelector('.js-game-top').addEventListener('click', resolveGameTop);
+
+  // MEDIUM
+  const g2Btn = document.querySelector('.js-g2-btn');
+  console.log("g2Btn:",g2Btn);
+  const toggleG2BtnHover  = () => {
+    g2Btn.classList.toggle('hover');
+  }
+  setTimeout(toggleG2BtnHover,1000);
+  setInterval(toggleG2BtnHover, 5000);
+  
 
   var AudioSynth = require('audiosynth');
   var AudioContext = window.AudioContext || window.webkitAudioContext;
