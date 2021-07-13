@@ -47,7 +47,7 @@ body.vanilla-modal{
   height: 207px; 
   @include breakpoint(sm){
     width: 500px; 
-    height: 208px;   
+    height: 347px;   
   }
   @include breakpoint(md){
     width: 600px; 
@@ -78,6 +78,11 @@ body.vanilla-modal{
     width: 40px;
     height: 40px;
     margin-right: 5px;
+    @include breakpoint(sm){
+      width: 60px;
+      height: 60px;
+      margin-right: 8px;   
+    }
     @include breakpoint(md){
       margin-right: 10px;
       width: 80px;
@@ -109,6 +114,10 @@ body.vanilla-modal{
     flex: 0 0 auto;
     margin-right: 5px;
     width: 40px;
+    @include breakpoint(sm){
+      width: 60px; 
+      margin-right: 8px;
+    }
     @include breakpoint(md){
       width: 80px; 
       margin-right: 10px;    
@@ -120,6 +129,11 @@ body.vanilla-modal{
       font-size: 16px;
       width: 100%;
       height: 40px;
+      @include breakpoint(sm){
+        padding: 4px 5px;
+        height: 60px; 
+        font-size: 18px; 
+      }
       @include breakpoint(md){
         padding: 4px 10px;
         height: 80px;     
@@ -143,6 +157,9 @@ body.vanilla-modal{
     border: none;
     padding: 0;
     height: 40px;
+    @include breakpoint(sm){      
+      height: 60px; 
+    }
     @include breakpoint(md){
       height: 80px;     
     }
@@ -170,10 +187,12 @@ body.vanilla-modal{
   width: 40px;
   height: 40px;
   top: 12px;
-  right: 14px;
-  @include breakpoint(sm){    
-    top: 12px;
-    right: 20px;
+  right: 14px;  
+  @include breakpoint(sm){   
+    width: 60px;
+    height: 60px; 
+    top: 20px;
+    right: 25px;
   }
   @include breakpoint(md){
     width: 80px;
