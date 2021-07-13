@@ -10,9 +10,23 @@ const interactiveGame = () => {
 
   const attentionLamp = document.querySelector('[data-attention-lamp]');
   const activateAttentionLamp = () => {
-    attentionLamp.classList.toggle('active');
+    if(attentionLamp){
+      attentionLamp.classList.toggle('active');
+    }
   }
   setInterval(activateAttentionLamp, 1000);
+
+  const hoverLinks = document.querySelectorAll('[data-hover-link]');
+  const activateLamp = (e) => {
+    document.querySelector(`[data-link-lamp="${e.target.dataset.hoverLink}"]`).classList.add('active');
+  }
+  const deactivateLamp = (e) => {
+    document.querySelector(`[data-link-lamp="${e.target.dataset.hoverLink}"]`).classList.remove('active');
+  }  
+  [...hoverLinks].map(el=>el.addEventListener("mouseover", activateLamp));
+  [...hoverLinks].map(el=>el.addEventListener("focus", activateLamp));
+  [...hoverLinks].map(el=>el.addEventListener("mouseleave", deactivateLamp));
+  [...hoverLinks].map(el=>el.addEventListener("blur", deactivateLamp));
 
   // MEDIUM
   const g2Btn = document.querySelector('.js-g2-btn');

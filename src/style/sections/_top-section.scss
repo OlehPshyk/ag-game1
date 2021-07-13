@@ -116,8 +116,7 @@
           will-change: background-image, background-size;
           background-size: contain, 0% 0%;
           background-image: url('/src/static/img/warningSign_off.png'),url('/src/static/img/warningSign_on.png');
-          &.active{
-            background-image: url('/src/static/img/warningSign_off.png'),url('/src/static/img/warningSign_on.png');
+          &.active{            
             background-size: 0% 0%, contain;            
           }
         }
@@ -329,23 +328,24 @@
             height: 100%;
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            background-size: contain;
+            background-size: contain, 0% 0%;
+            will-change: background-image, background-size;
             &.sign-1{
-              background-image: url('/src/static/img/redLight_off.png');
-              &.active{
-                background-image: url('/src/static/img/redLight_on.png');            
+              background-image: url('/src/static/img/redLight_off.png'),url('/src/static/img/redLight_on.png');
+              &.active{                
+                background-size: 0% 0%, contain;          
               }
             }
             &.sign-2{
-              background-image: url('/src/static/img/greenLight_off.png');
-              &.active{
-                background-image: url('/src/static/img/greenLight_on.png');            
+              background-image: url('/src/static/img/greenLight_off.png'),url('/src/static/img/greenLight_on.png');
+              &.active{                
+                background-size: 0% 0%, contain;           
               }
             }
             &.sign-3{
-              background-image: url('/src/static/img/yellowLight_off.png');
-              &.active{
-                background-image: url('/src/static/img/yellowLight_on.png');            
+              background-image: url('/src/static/img/yellowLight_off.png'),url('/src/static/img/yellowLight_on.png');
+              &.active{                 
+                background-size: 0% 0%, contain;           
               }
             }            
           }
@@ -360,7 +360,7 @@
         align-items: center;
         .sign-wrapper{
           flex: 0 1 auto;
-          width: 95%;
+          width: 82%;
           // @media screen and (min-width: 1440px){
           //   width: 77%;
           // }
@@ -368,7 +368,7 @@
         .sign-asp-box{
           position: relative;
           width: 100%;
-          padding-bottom: 22%;
+          padding-bottom: 25%;
         }
         .sign-text{
           display: inline-flex;
