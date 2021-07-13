@@ -113,10 +113,12 @@
           height: 100%;
           background-repeat: no-repeat;
           background-position: 50% 50%;
-          background-size: contain;
-          background-image: url('/src/static/img/warningSign_off.png');
+          will-change: background-image, background-size;
+          background-size: contain, 0% 0%;
+          background-image: url('/src/static/img/warningSign_off.png'),url('/src/static/img/warningSign_on.png');
           &.active{
-            background-image: url('/src/static/img/warningSign_on.png');            
+            background-image: url('/src/static/img/warningSign_off.png'),url('/src/static/img/warningSign_on.png');
+            background-size: 0% 0%, contain;            
           }
         }
       }

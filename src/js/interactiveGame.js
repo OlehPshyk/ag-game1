@@ -8,6 +8,12 @@ const interactiveGame = () => {
   }
   document.querySelector('.js-game-top').addEventListener('click', resolveGameTop);
 
+  const attentionLamp = document.querySelector('[data-attention-lamp]');
+  const activateAttentionLamp = () => {
+    attentionLamp.classList.toggle('active');
+  }
+  setInterval(activateAttentionLamp, 1000);
+
   // MEDIUM
   const g2Btn = document.querySelector('.js-g2-btn');
   const toggleG2BtnHover  = () => {
