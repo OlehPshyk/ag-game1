@@ -81,10 +81,10 @@ body.vanilla-modal{
     @include breakpoint(sm){
       width: 60px;
       height: 60px;
-      margin-right: 8px;   
+      margin-right: 10px;   
     }
     @include breakpoint(md){
-      margin-right: 10px;
+      margin-right: 15px;
       width: 80px;
       height: 80px;     
     }
@@ -116,11 +116,11 @@ body.vanilla-modal{
     width: 40px;
     @include breakpoint(sm){
       width: 60px; 
-      margin-right: 8px;
+      margin-right: 10px;
     }
     @include breakpoint(md){
       width: 80px; 
-      margin-right: 10px;    
+      margin-right: 15px;    
     }
     .input{
       padding: 2px 2px;
@@ -159,8 +159,11 @@ body.vanilla-modal{
         -moz-appearance: textfield;
     }
   }
-  .btn-submit{
-    flex: 1 1 auto;
+  // .submit-wrapper{
+    
+  // }
+  .btn-submit{  
+    flex: 1 1 auto;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,26 +172,27 @@ body.vanilla-modal{
     border: none;
     padding: 0;
     height: 40px;
+    font-size: 12px;
     @include breakpoint(sm){      
       height: 60px; 
+      font-size: 16px;
     }
     @include breakpoint(md){
       height: 80px;     
     }
-    font-family: $global-font-family;
-    font-size: 16px;
+    font-family: $global-font-family;    
     color: #000;
     background-color: transparent;   
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: contain, 0% 0%, 0% 0%;
+    background-size: 100% 100%, 0% 0%, 0% 0%;
     background-image: url('/src/static/img/gree_button_default.png'), url('/src/static/img/green_button_hover.png'), url('/src/static/img/green_button_pressed.png');
     will-change: background-image, background-size;
     &:hover{
-      background-size: 0% 0%, contain, 0% 0%;
+      background-size: 0% 0%, 100% 100%, 0% 0%;
     }
     &:active,&.active{
-      background-size: 0% 0%, 0% 0%, contain;
+      background-size: 0% 0%, 0% 0%, 100% 100%;
     }
   }
 }
