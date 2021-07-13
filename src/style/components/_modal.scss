@@ -57,6 +57,19 @@ body.vanilla-modal{
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
+  .modal-text-container{
+    position: absolute;
+    top: 19%;
+    left: 14%;
+    width: 64%;
+    height: 36%;
+    #m-t1{
+      color: #35BE6B;
+      font-family: $global-font-family;
+      font-size: 12px;
+      line-height: 1.3;
+    }
+  }
 }
 .popup-1-form{
   position: absolute;
@@ -181,7 +194,7 @@ body.vanilla-modal{
       height: 80px;     
     }
     font-family: $global-font-family;    
-    color: #000;
+    color: #fff;
     background-color: transparent;   
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -194,7 +207,7 @@ body.vanilla-modal{
     &:active,&.active{
       background-size: 0% 0%, 0% 0%, 100% 100%;
     }
-  }
+  }  
 }
 .btn-popup-1-close{
   @include outline(0);

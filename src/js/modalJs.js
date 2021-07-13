@@ -1,4 +1,5 @@
 import VanillaModal from 'vanilla-modal';
+import Typewriter from 'typewriter-effect/dist/core';
 const modalJs = () => {
    
   const qBtn = document.querySelectorAll('[data-q-ch]');
@@ -14,7 +15,28 @@ const modalJs = () => {
   }else{
     qBtn[1].removeAttribute('disabled');
   }
+  const onOpenModal = () => {    
+    let t1writer; 
+    const endAnime = () => {
+      document.querySelector('#m-t1').querySelector('.Typewriter__cursor').remove();
+    }   
 
+    t1writer = new Typewriter(document.getElementById('m-t1'), {
+      loop: false,
+      delay: 75,    
+    });
+
+    t1writer
+      .pauseFor(500)
+      .typeString('> Launch sequence initiated...<br><br>')
+      .pauseFor(1000)
+      .typeString('> System demands 0.052 Ξ<br><br>')    
+      .pauseFor(1000)
+      .typeString('> Please enter quantity')       
+      .start()    
+      .callFunction(endAnime);
+  }
+  
   const options = {
     modal: '.modal',
     modalInner: '.modal-inner',
@@ -29,7 +51,7 @@ const modalJs = () => {
     transitions: true,
     onBeforeOpen: null,
     onBeforeClose: null,
-    onOpen: null,
+    onOpen: onOpenModal,
     onClose: null
   }
   const modal = new VanillaModal(options);
