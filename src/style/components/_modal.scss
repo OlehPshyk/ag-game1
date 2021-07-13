@@ -94,7 +94,7 @@ body.vanilla-modal{
     background-size: contain, 0% 0%, 0% 0%;
     will-change: background-image, background-size;
     &:disabled{
-      opacity: 0.4;
+      filter: grayscale(1);
       pointer-events: none;
     }
     &:hover{
@@ -146,6 +146,16 @@ body.vanilla-modal{
         border-radius: 15px;    
       }
     }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    input[type='number'],
+    input[type="number"]:hover,
+    input[type="number"]:focus {
+        appearance: none;
+        -moz-appearance: textfield;
+    }
   }
   .btn-submit{
     flex: 1 1 auto;
@@ -163,6 +173,9 @@ body.vanilla-modal{
     @include breakpoint(md){
       height: 80px;     
     }
+    font-family: $global-font-family;
+    font-size: 16px;
+    color: #000;
     background-color: transparent;   
     background-repeat: no-repeat;
     background-position: 50% 50%;
