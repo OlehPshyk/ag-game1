@@ -59,13 +59,13 @@ const interactiveGame = () => {
       // Set filter cuttoff
       synth.setFilterCutoff(0.2);
       // Increase amplitude release time
-      synth.setAmpReleaseTime(0.7);
+      synth.setAmpReleaseTime(0.9);
       // Set filter envelope modulation amount
       synth.setFilterEnvMod(0.8);
       // Set filter attack time
       synth.setFilterAttackTime(0.9);  
       // (MIDINote, amplitude, filterOffset, currentTime)         
-      synth.playNote(synth.noteToMIDI(g3Btn.dataset.note||'C', 4), 1.0, 1.0, 0);  
+      synth.playNote(synth.noteToMIDI(g3Btn.dataset.note||'C', 3), 1.0, 1.0, 0);
       // startSound = setInterval(()=>{synth.playNote(synth.noteToMIDI(g3Btn.dataset.note||'C', 4), 1.0, 1.0, 0)}, 100);   
     }
   }  
