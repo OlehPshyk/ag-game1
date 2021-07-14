@@ -3,8 +3,15 @@ import Typewriter from 'typewriter-effect/dist/core';
 const modalJs = () => {
    
   const qBtn = document.querySelectorAll('[data-q-ch]');
-  const qInput = document.querySelector('[data-q]');  
+  const qInput = document.querySelector('[data-q]'); 
+  let spanTotal = null;
+  const calcTotal = (q) => {       
+    return (q * 0.052).toFixed(3);
+  }
   let inputValue = parseInt(qInput.value);
+  let total = calcTotal(parseInt(qInput.value));
+
+
   if(inputValue === 0){
     qBtn[0].setAttribute('disabled', true);
   }else{
@@ -16,16 +23,30 @@ const modalJs = () => {
     qBtn[1].removeAttribute('disabled');
   }
   const onOpenModal = () => {    
-    let t1writer; 
+    let t1writer, t2writer; 
+    const endAnime2 = () => {
+      document.querySelector('#m-t2').querySelector('.Typewriter__cursor').remove();  
+      spanTotal = document.querySelector('[data-total]');
+    }
+    const startWrite2 = () => {
+      t2writer = new Typewriter(document.getElementById('m-t2'), {
+        loop: false,
+        delay: 75,    
+      });      
+      t2writer
+      .pauseFor(500)
+      .typeString(`Total: <span data-total="total">${total}</span>`)         
+      .start()    
+      .callFunction(endAnime2);
+    }
     const endAnime = () => {
       document.querySelector('#m-t1').querySelector('.Typewriter__cursor').remove();
-    }   
-
+      startWrite2();
+    }
     t1writer = new Typewriter(document.getElementById('m-t1'), {
       loop: false,
       delay: 75,    
     });
-
     t1writer
       .pauseFor(500)
       .typeString('> Launch sequence initiated...<br><br>')
@@ -61,6 +82,8 @@ const modalJs = () => {
     let val = parseInt(qInput.value);
     qInput.value = val + parseInt(e.target.dataset.qCh);
     inputValue = parseInt(qInput.value);
+    total = calcTotal(inputValue);
+    spanTotal.innerText = total;
     if(inputValue === 0){
       qBtn[0].setAttribute('disabled', true);
     }else{
