@@ -11,7 +11,6 @@ const modalJs = () => {
   let inputValue = parseInt(qInput.value);
   let total = calcTotal(parseInt(qInput.value));
 
-
   if(inputValue === 0){
     qBtn[0].setAttribute('disabled', true);
   }else{
@@ -22,17 +21,22 @@ const modalJs = () => {
   }else{
     qBtn[1].removeAttribute('disabled');
   }
-  const onOpenModal = () => {    
+
+  const resetInput = () => {
+    qInput.value = 0;  
+    qBtn[0].setAttribute('disabled', true);
+  }
+
+  const onOpenModal = () => {
     let t1writer, t2writer; 
     const endAnime2 = () => {
-      document.querySelector('#m-t2').querySelector('.Typewriter__cursor').remove();  
+      let cursor2 = document.querySelector('#m-t2').querySelector('.Typewriter__cursor'); 
+      if(cursor2){
+        cursor2.remove()
+      } 
       spanTotal = document.querySelector('[data-total]');
     }
-    const startWrite2 = () => {
-      t2writer = new Typewriter(document.getElementById('m-t2'), {
-        loop: false,
-        delay: 75,    
-      });      
+    const startWrite2 = () => {             
       t2writer
       .pauseFor(500)
       .typeString(`Total: <span data-total="total">${total}</span>`)         
@@ -40,13 +44,26 @@ const modalJs = () => {
       .callFunction(endAnime2);
     }
     const endAnime = () => {
-      document.querySelector('#m-t1').querySelector('.Typewriter__cursor').remove();
+      let cursor1 = document.querySelector('#m-t1').querySelector('.Typewriter__cursor');
+      if(cursor1){
+        cursor1.remove();        
+      }
       startWrite2();
     }
     t1writer = new Typewriter(document.getElementById('m-t1'), {
       loop: false,
       delay: 75,    
     });
+    
+    t2writer = new Typewriter(document.getElementById('m-t2'), {
+      loop: false,
+      delay: 75,    
+    }); 
+    let cursor2 = document.querySelector('#m-t2').querySelector('.Typewriter__cursor'); 
+    if(cursor2){
+      cursor2.remove()
+    }     
+
     t1writer
       .pauseFor(500)
       .typeString('> Launch sequence initiated...<br><br>')
@@ -56,6 +73,13 @@ const modalJs = () => {
       .typeString('> Please enter quantity')       
       .start()    
       .callFunction(endAnime);
+  }
+
+  const onCloseModal = () => {
+    document.querySelector('#m-t1').innerHTML = '';
+    document.querySelector('#m-t2').innerHTML = '';
+    total = calcTotal(0);
+    resetInput();
   }
   
   const options = {
@@ -73,17 +97,18 @@ const modalJs = () => {
     onBeforeOpen: null,
     onBeforeClose: null,
     onOpen: onOpenModal,
-    onClose: null
+    onClose: onCloseModal
   }
   const modal = new VanillaModal(options);
-
          
   const changeInput = (e)=>{ 
     let val = parseInt(qInput.value);
     qInput.value = val + parseInt(e.target.dataset.qCh);
     inputValue = parseInt(qInput.value);
     total = calcTotal(inputValue);
-    spanTotal.innerText = total;
+    if(spanTotal){
+      spanTotal.innerText = total;
+    }
     if(inputValue === 0){
       qBtn[0].setAttribute('disabled', true);
     }else{
