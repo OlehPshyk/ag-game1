@@ -44,6 +44,9 @@
       object-position: 50% 0%;
     }
     .int-board-1{
+      @include breakpoint(xs-only){
+        overflow: hidden;
+      }
       position: absolute;
       top: 0;
       left: 50%;
@@ -57,30 +60,37 @@
       max-width: $game-content;
       margin: 0 auto;
     }
-    .tg1,.tg2,.tg3{
-      flex: 1 1 auto;
-      width: 33%;
-    }
+    // .tg1,.tg2,.tg3{}
     .tg1{
-      display: none;
+      @include breakpoint(xs-only){
+        position: absolute;
+        top: 70%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        width: 50%;
+      }
       @include breakpoint(sm){
+        flex: 1 1 auto;
+        width: 33%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: stretch;
       }
-      .lblock-item{
+      // .lblock-item{}        
+    }
+    .tg1-1{
+      @include breakpoint(xs-only){
+        display: none;
+      }
+      @include breakpoint(sm){
         flex: 1 1 auto;
         display: flex;
         justify-content: space-around;
         align-items: center;
-      }        
-    }
-    .tg1-1{
-      height: 20%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+        height: 20%;
+        display: flex;        
+      }
       // @media screen and (min-width: 1440px){
       //   height: 25%;
       // }
@@ -131,8 +141,17 @@
       }
     }    
     .tg1-2{
-      height: 18%;
-      padding: 0 6%;
+      @include breakpoint(xs-only){
+        display: none;
+      }
+      @include breakpoint(sm){
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 18%;
+        padding: 0 6%;
+      }
       // @media screen and (min-width: 1440px){
       //   height: 20%;
       // }
@@ -172,6 +191,10 @@
       }
     } 
     .tg1-3{
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
       height: 62%;
       // @media screen and (min-width: 1440px){
       //   height: 55%;
@@ -203,6 +226,8 @@
       @include breakpoint(xs-only){
         padding-top: 80px;
       }
+      flex: 1 1 auto;
+      width: 33%;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -266,7 +291,9 @@
         width: 100%;
       }
       
-      @include breakpoint(sm){        
+      @include breakpoint(sm){  
+        flex: 1 1 auto;
+        width: 33%;      
         flex-direction: column;
         justify-content: center;
         align-items: stretch;
@@ -353,7 +380,13 @@
       //   height: 62%;
       // }
       .tg3-2-1{
-        display: none;
+        @include breakpoint(xs-only){
+          position: absolute;
+          right: 0;
+          top: 33vh;
+          width: 80px;
+          transform: translate(50%, -50%);
+        }
         @include breakpoint(sm){
           flex: 1 1 auto;
           width: 25%;
@@ -363,6 +396,11 @@
           align-items: center;
         }
         .sign-wrapper{
+          @include breakpoint(xs-only){
+            &:not(:last-child){
+              margin-bottom: 10px;
+            }
+          }
           flex: 0 1 auto;
           width: 88%;
           // @media screen and (min-width: 1440px){
