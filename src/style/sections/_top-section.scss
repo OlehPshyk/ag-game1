@@ -7,7 +7,10 @@
   .game-top{  
     flex: 0 0 auto;      
     position: relative;
-    height: 44vw;
+    height: 65vh;
+    @include breakpoint(sm){
+      height: 44vw;
+    }
     @media screen and (min-width: 1440px){
       // height: 25vw;
       height: 633px;
@@ -47,8 +50,10 @@
       transform: translate(-50%,0);
       width: 100%;
       height: 100%;
+      
       display: flex;
       justify-content: center;
+      
       max-width: $game-content;
       margin: 0 auto;
     }
@@ -57,10 +62,13 @@
       width: 33%;
     }
     .tg1{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch;
+      display: none;
+      @include breakpoint(sm){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+      }
       .lblock-item{
         flex: 1 1 auto;
         display: flex;
@@ -192,13 +200,21 @@
     }   
     .tg2{
       // screen_dickbutt_animation_v02.gif
+      @include breakpoint(xs-only){
+        padding-top: 80px;
+      }
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
       position: relative;
       .anime-wrapper{
-        width: 93%;
+        @include breakpoint(xs-only){
+          width: 60%;
+        }
+        @include breakpoint(sm){
+          width: 93%;
+        }
         // @media screen and (min-width: 1440px){
         //   width: 55%;
         // }
@@ -239,25 +255,47 @@
       }      
     }
     .tg3{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: stretch;
-      .rblock-item{
-        flex: 1 1 auto;
-        display: flex;
-        padding: 0 3%;
-      }        
+      display: flex;      
+      @include breakpoint(xs-only){
+        padding: 10px;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      
+      @include breakpoint(sm){        
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+      }
+      // .rblock-item{}        
     }
     .tg3-1{
-      justify-content: flex-end;
-      align-items: flex-end;
-      height: 16%;
+      display: flex;
+      @include breakpoint(xs-only){        
+        justify-content: center;
+        align-items: center;
+      }
+      @include breakpoint(sm){
+        flex: 1 1 auto;        
+        padding: 0 3%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 16%;
+      }
       // @media screen and (min-width: 1440px){
       //   height: 21%;
       // }
       .btn-wrapper{
-        width: 48%;
+        @include breakpoint(xs-only){
+          width: 130px;
+        }
+        @include breakpoint(sm){
+          width: 48%;
+        }
         // @media screen and (min-width: 1440px){
         //   width: 40%;
         // }
@@ -266,7 +304,10 @@
         position: relative;
         width: 100%;
         margin: 0 auto;
-        padding-bottom: 43%;
+        padding-bottom: 38%;
+        @include breakpoint(sm){
+          padding-bottom: 43%;
+        }
       }
       .tg3-1-btn{
         @include outline(0);
@@ -294,21 +335,33 @@
       }
     }
     .tg3-2{
-      height: 65%;
-      justify-content: center;
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
+      flex: 0 1 auto;
+      @include breakpoint(xs-only){
+        margin-right: 15px;
+      }
+      @include breakpoint(sm){
+        flex: 1 1 auto;
+        display: flex;
+        padding: 0 3%;
+        height: 65%;
+        justify-content: center;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+      }
       // @media screen and (min-width: 1440px){
       //   height: 62%;
       // }
       .tg3-2-1{
-        flex: 1 1 auto;
-        width: 25%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+        display: none;
+        @include breakpoint(sm){
+          flex: 1 1 auto;
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+        }
         .sign-wrapper{
           flex: 0 1 auto;
           width: 88%;
@@ -352,12 +405,15 @@
         }
       }
       .tg3-2-2{
-        flex: 1 1 auto;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        display: none;
+        @include breakpoint(sm){
+          flex: 1 1 auto;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        }
         .sign-wrapper{
           flex: 0 1 auto;
           width: 82%;
@@ -405,19 +461,29 @@
         }        
       } 
       .tg3-2-3{
-        flex: 1 1 auto;
-        width: 25%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: flex;        
+        @include breakpoint(sm){
+          flex: 1 1 auto;
+          width: 25%;          
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
         .btn-wrapper{
-          width: 88%;
+          width: 60px;
+          @include breakpoint(sm){
+            width: 88%;
+          }
           // @media screen and (min-width: 1440px){
           //   width: 72%;
           // }
           &:not(:last-child){
-            margin-bottom: 12%;
+            @include breakpoint(xs-only){
+              margin-right: 15px;
+            }
+            @include breakpoint(sm){
+              margin-bottom: 12%;
+            }
           }
         }
         .btn-asp-box{
@@ -463,9 +529,15 @@
       }
     }
     .tg3-3{
-      height: 19%;
-      justify-content: flex-start;
-      align-items: center;
+      display: none;
+      @include breakpoint(sm){
+        flex: 1 1 auto;
+        display: flex;
+        padding: 0 3%;
+        height: 19%;
+        justify-content: flex-start;
+        align-items: center;
+      }      
       // @media screen and (min-width: 1440px){
       //   height: 17%;
       // }
@@ -495,7 +567,10 @@
   .game-medium{  
     flex: 0 0 auto;
     position: relative;
-    height: 24vw;
+    height: 35vh;
+    @include breakpoint(sm){
+      height: 24vw;
+    }
     @media screen and (min-width: 1440px){
       // height: 19vw;
       height: 346px;
@@ -544,9 +619,13 @@
       // } 
     } 
     .g1{
-      flex: 1 1 auto;
-      position: relative;
-      width: 32%;  
+      display: none;
+      @include breakpoint(sm){
+        display: block;
+        flex: 1 1 auto;
+        position: relative;
+        width: 32%; 
+      }       
       .img-box{
         position: absolute;
         top: 50%;
@@ -581,15 +660,22 @@
     } 
     .g2{
       flex: 1 1 auto;
-      position: relative;
-      width: 36%;
+      position: relative;      
+      @include breakpoint(sm){
+        width: 36%;
+      }      
       display: flex;
       justify-content: center;
       align-items: center;
       .bg-g2-btn-wrapper{
+        @include breakpoint(xs-only){
+          max-width: 360px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-55%);
+        }
         position: absolute;
         width: 100%;
-        height: 100%;
         .btn-asp-box{
           position: relative;
           width: 100%;
@@ -612,6 +698,9 @@
         background-size: 100% auto;
       }
       .btn-wrapper{
+        @include breakpoint(xs-only){
+          max-width: 200px;
+        }
         width: 56%;
         .btn-asp-box{
           position: relative;
@@ -693,12 +782,15 @@
 
     } 
     .g3{
-      flex: 1 1 auto;
-      position: relative;
-      width: 32%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;      
+      display: none;
+      @include breakpoint(sm){
+        flex: 1 1 auto;
+        position: relative;
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+      }  
       .g3-row{
         display: flex;
         flex-wrap: wrap;
