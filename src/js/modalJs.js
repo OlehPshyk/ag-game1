@@ -82,12 +82,26 @@ const modalJs = () => {
       qBtn[1].removeAttribute('disabled');
     }
   }  
+  const updateURL = (newpath)=>{
+    // if (history.pushState) {
+    //   let newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+    //   if (newpath) {
+    //     newurl = newurl + newpath
+    //   }
+    //   window.history.pushState({
+    //     path: newurl
+    //   }, '', newurl);
+    //   document.location.reload();
+    // }else{
+      document.location.href=`${document.location.origin}${document.location.pathname}${newpath}`;
+    // }
+  }
   const sendMintForm = (e) => {
     e.preventDefault();    
     let qMint = e.target.querySelector('[data-q]').value;
     console.log("quantity Mint:",qMint);
     console.log("total Mint:",total);
-    document.location.href=`${document.location.origin}${document.location.pathname}second`;
+    updateURL('second');
   }
   
   inputValue = parseInt(qInput.value);

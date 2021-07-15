@@ -82,7 +82,7 @@ module.exports = {
     //   'window.$': 'jquery',            
     //   Popper: ['popper.js', 'default']
     // }),
-    ...generateHTMLPlugins(),
+    ...generateHTMLPlugins(),    
   ],
   stats: {
     colors: true,

@@ -19,7 +19,7 @@ module.exports = merge(common, {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-          },
+          },          
           'css-loader',
           'postcss-loader',
           'sass-loader',
@@ -38,6 +38,6 @@ module.exports = merge(common, {
       cssProcessor: cssnano,
       cssProcessorOptions: { discardComments: { removeAll: true } },
       canPrint: true,
-    }),
+    }),    
   ],
 });
