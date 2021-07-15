@@ -6,7 +6,8 @@ const interactiveGame = () => {
       tg1Btn.classList.toggle('active');
     }    
   }
-  document.querySelector('.js-game-top').addEventListener('click', resolveGameTop);
+  let topGame = document.querySelector('.js-game-top');
+  topGame&&topGame.addEventListener('click', resolveGameTop);
 
   const attentionLamp = document.querySelector('[data-attention-lamp]');
   const activateAttentionLamp = () => {
@@ -30,12 +31,13 @@ const interactiveGame = () => {
 
   // MEDIUM
   const g2Btn = document.querySelector('.js-g2-btn');
-  const toggleG2BtnHover  = () => {
-    g2Btn.classList.toggle('hover');
+  if(g2Btn){
+    const toggleG2BtnHover  = () => {
+      g2Btn.classList.toggle('hover');
+    }
+    setTimeout(toggleG2BtnHover,1000);
+    setInterval(toggleG2BtnHover, 5000);
   }
-  setTimeout(toggleG2BtnHover,1000);
-  setInterval(toggleG2BtnHover, 5000);
-  
 
   var AudioSynth = require('audiosynth');
   var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -72,7 +74,8 @@ const interactiveGame = () => {
   // const stopSound = () =>{
   //   clearInterval(startSound);
   // }
-  document.querySelector('.js-game-medium').addEventListener('mousedown', resolveGameMedium);
+  let mediumGame = document.querySelector('.js-game-medium');
+  mediumGame&&mediumGame.addEventListener('mousedown', resolveGameMedium);
   // document.querySelector('.js-game-medium').addEventListener('mouseup', stopSound);
 }
 

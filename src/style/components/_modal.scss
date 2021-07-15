@@ -79,18 +79,18 @@ body.vanilla-modal{
     }
     #m-t2{
       position: absolute;
-      top: 70%;
+      top: 92%;
       right: 10%;
       color: #35BE6B;
       font-family: $global-font-family;
       @include breakpoint(xs-only){
-        font-size: 6px;
-      }
-      @include breakpoint(sm){
         font-size: 10px;
       }
+      @include breakpoint(sm){
+        font-size: 16px;
+      }
       @include breakpoint(md){
-        font-size: 12px;
+        font-size: 20px;
       }
       line-height: 1.3;
     }
