@@ -87,7 +87,7 @@ const modalJs = () => {
     let qMint = e.target.querySelector('[data-q]').value;
     console.log("quantity Mint:",qMint);
     console.log("total Mint:",total);
-    document.location.href=`${document.location.origin}${document.location.pathname}second`;
+    document.location.href=`${document.location.origin}${document.location.pathname}second.html`;
   }
   
   inputValue = parseInt(qInput.value);
