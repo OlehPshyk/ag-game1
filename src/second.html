@@ -15,7 +15,8 @@
 <body> 
   <main class="main"> 
     <div class="second-section">
-      <div class="wrapper">
+      <div class="fog"></div>
+      <div class="wrapper" onclick="console.log('click')">
         <div class="img-wrapper">
           <img class="second-img" src="./static/img/Landscape_02_Animation.gif" alt="tree">
         </div>
@@ -39,5 +40,10 @@
       </div>
     </div>
   </main>  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => { 
+      setTimeout(()=>document.querySelector('.fog').classList.add('disabled'),0);
+    });
+  </script>
 </body>
 </html>
