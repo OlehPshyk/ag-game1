@@ -1,4 +1,4 @@
-# ag-game1
+# cdb
 
 ## 🛠 Usage
 - Available commands:
@@ -16,7 +16,7 @@ This boilerplate contains integration with [Travis CI](https://travis-ci.org/).
 ## For start project for some changes next instructions:
 
 # 1) clone the project into your PC (git should be installed https://git-scm.com/downloads)
-  - git clone git@github.com:OlehPshyk/ag-game1.git
+  - git clone git@github.com:OlehPshyk/cdb.git
 
 # 2) goto to the folder with project
 
