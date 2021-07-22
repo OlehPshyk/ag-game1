@@ -1,7 +1,16 @@
 const webpack = require('webpack');
+const glob = require('glob');
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.config.common.js');
-
+const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
+  dir => new HTMLWebpackPlugin({
+    filename: path.basename(dir), // Output
+    template: dir, // Input
+    inject: true,
+  }),
+);
 module.exports = merge(common, {
   mode: 'development',
   devServer: {
@@ -21,6 +30,7 @@ module.exports = merge(common, {
     ],
   },
   plugins: [    
-    new webpack.HotModuleReplacementPlugin(),    
+    new webpack.HotModuleReplacementPlugin(), 
+    ...generateHTMLPlugins(),   
   ],
 });

@@ -1,9 +1,9 @@
 // import casheImages from './casheImages';
-import interactiveGame from './interactiveGame';
+import interactiveCdb from './interactiveCdb';
 import modalJs from './modalJs';
 document.addEventListener('DOMContentLoaded', () => { 
   // casheImages();    
-  interactiveGame();
+  interactiveCdb();
   if(document.getElementById('popup-1')) {
     modalJs();
   }

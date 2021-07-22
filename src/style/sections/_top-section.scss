@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
   }
-  .game-top{  
+  .cdb-top{  
     flex: 0 0 auto;      
     position: relative;
     height: 65vh;
@@ -32,7 +32,7 @@
         background-size: 100% 100%;
       }      
     }  
-    .game-bg-top{     
+    .cdb-bg-top{     
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -52,7 +52,7 @@
       display: flex;
       justify-content: center;
       
-      max-width: $game-content;
+      max-width: $cdb-content;
       margin: 0 auto;
     }    
     .tg1{
@@ -601,7 +601,7 @@
       }
     }
   }
-  .game-medium{  
+  .cdb-medium{  
     flex: 0 0 auto;
     position: relative;
     height: 35vh;
@@ -630,7 +630,7 @@
         background-size: 100% 100%;
       }        
     }
-    .game-bg-medium{
+    .cdb-bg-medium{
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -645,7 +645,7 @@
       height: 85%;      
       display: flex;
       align-items: stretch;
-      max-width: $game-content;
+      max-width: $cdb-content;
       margin: 0 auto;      
     } 
     .g1{
@@ -912,7 +912,7 @@
       }
     }   
   }
-  .game-bottom{
+  .cdb-bottom{
     flex: 0 0 auto;
     position: relative;
     height: 41vw;

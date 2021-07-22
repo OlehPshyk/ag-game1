@@ -1,18 +1,15 @@
-const glob = require('glob');
+// const glob = require('glob');
 const path = require('path');
-
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+// const HTMLWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
-
-const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
-  dir => new HTMLWebpackPlugin({
-    filename: path.basename(dir), // Output
-    template: dir, // Input
-    inject: false,
-  }),
-);
-
+// const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
+//   dir => new HTMLWebpackPlugin({
+//     filename: path.basename(dir), // Output
+//     template: dir, // Input
+//     inject: false,
+//   }),
+// );
 module.exports = {
   node: {
     fs: 'empty',
@@ -82,7 +79,7 @@ module.exports = {
     //   'window.$': 'jquery',            
     //   Popper: ['popper.js', 'default']
     // }),
-    ...generateHTMLPlugins(),    
+    // ...generateHTMLPlugins(),    
   ],
   stats: {
     colors: true,

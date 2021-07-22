@@ -1,13 +1,13 @@
-const interactiveGame = () => {  
+const interactiveCdb = () => {  
   // TOP
-  const resolveGameTop = (event) => {
+  const resolveCdbTop = (event) => {
     const tg1Btn = event.target.closest('[data-id="tg1-btn"]');    
     if(tg1Btn){
       tg1Btn.classList.toggle('active');
     }    
   }
-  let topGame = document.querySelector('.js-game-top');
-  topGame&&topGame.addEventListener('click', resolveGameTop);
+  let topCdb = document.querySelector('.js-cdb-top');
+  topCdb&&topCdb.addEventListener('click', resolveCdbTop);
 
   const attentionLamp = document.querySelector('[data-attention-lamp]');
   const activateAttentionLamp = () => {
@@ -49,7 +49,7 @@ const interactiveGame = () => {
   // synth.setOscWave(2); // Sawtooth Wave
   synth.setOscWave(3); // Triangle Wave
   // let startSound;
-  const resolveGameMedium = (event) => {    
+  const resolveCdbMedium = (event) => {    
     const g3Btn = event.target.closest('[data-id="g3-btn"]');
     if(g3Btn){ 
       // function(MIDINote, amplitude, filterOffset, currentTime)
@@ -74,9 +74,9 @@ const interactiveGame = () => {
   // const stopSound = () =>{
   //   clearInterval(startSound);
   // }
-  let mediumGame = document.querySelector('.js-game-medium');
-  mediumGame&&mediumGame.addEventListener('mousedown', resolveGameMedium);
-  // document.querySelector('.js-game-medium').addEventListener('mouseup', stopSound);
+  let mediumCdb = document.querySelector('.js-cdb-medium');
+  mediumCdb&&mediumCdb.addEventListener('mousedown', resolveCdbMedium);
+  // document.querySelector('.js-cdb-medium').addEventListener('mouseup', stopSound);
 }
 
-export default interactiveGame;
+export default interactiveCdb;
