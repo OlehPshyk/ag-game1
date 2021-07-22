@@ -81,7 +81,11 @@
                 </div> 
                 <div class="counter-wrapper">
                   <div class="counter-asp-box">
-                    <img class="tg2-counter" src="./static/img/counter.png" alt="counter"> 
+                    <picture>
+                      <source media="(max-width: 1199px)" srcset="./static/img/counter-233.png" type="image/png">
+                      <source media="(min-width: 1200px)" srcset="./static/img/counter-280.png" type="image/png">
+                      <img class="tg2-counter" src="./static/img/counter-280.png" alt="counter">
+                    </picture>                     
                     <span class="counter-symbols"><span data-count='1'>5000</span><span data-count='2'>/</span><span data-count='3'>5200</span></span>
                   </div>                  
                 </div>
@@ -328,7 +332,10 @@
       <div class="footer-container">
         <div class="logo-container">
           <a href="/">
-            <img class="logo" src="./static/img/Logo.png" alt="logo">           
+            <picture>
+              <source srcset="./static/img/logo-270.png" type="image/png">              
+              <img class="logo" src="./static/img/logo-270.png" alt="logo">
+            </picture>                        
           </a>
         </div>
         <div class="copy-container">
