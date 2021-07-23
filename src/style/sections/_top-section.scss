@@ -27,8 +27,7 @@
       @include breakpoint(xl){
         background-image: url('/src/static/img/background_topsection_medium-xl.png');
       }
-      @media screen and (min-width: 1440px){
-        background-image: url('/src/static/img/background_topsection_medium-xl.png');
+      @media screen and (min-width: 1440px){        
         background-size: 100% 100%;
       }      
     }  
