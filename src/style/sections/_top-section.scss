@@ -23,12 +23,12 @@
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: cover;   
-      background-image: url('/src/static/img/background_topsection_medium-375.jpg');
+      background-image: url('/src/static/img/background_topsection_medium-sm.jpg');
       @include breakpoint(xl){
-        background-image: url('/src/static/img/background_topsection_medium-1350.jpg');
+        background-image: url('/src/static/img/background_topsection_medium-xl.jpg');
       }
       @media screen and (min-width: 1440px){
-        background-image: url('/src/static/img/background_topsection_medium-1350.jpg');
+        background-image: url('/src/static/img/background_topsection_medium-xl.jpg');
         background-size: 100% 100%;
       }      
     }  
@@ -120,7 +120,7 @@
           background-position: 50% 50%;
           will-change: background-image, background-size;
           background-size: contain, 0% 0%;
-          background-image: url('/src/static/img/warningsign_off-81.png'),url('/src/static/img/warningsign_on-81.png');
+          background-image: url('/src/static/img/warningsign_off.png'),url('/src/static/img/warningsign_on.png');
           &.active{            
             background-size: 0% 0%, contain;            
           }
@@ -163,7 +163,7 @@
         background-position: 50% 100%;
         background-size: 100% auto, 0% 0%;
         will-change: background-image, background-size;        
-        background-image: url('/src/static/img/switch_toggle_02-63.png'),url('/src/static/img/switch_toggle_01-63.png');
+        background-image: url('/src/static/img/switch_toggle_02.png'),url('/src/static/img/switch_toggle_01.png');
         &:active,&.active{          
           background-size: 0% 0%, 100% auto;
           transform: translateY(-18%);
@@ -294,17 +294,7 @@
       // .rblock-item{}        
     }
     .tg3-1{
-      display: flex;      
-      // justify-content: center;
-      // align-items: center;
-      // @include breakpoint(xs-only){        
-      //   justify-content: center;
-      //   align-items: center;
-      // }
-      // @include breakpoint(sm){
-      //   flex: 1 1 auto;        
-      //   padding: 0 3%;        
-      // }
+      display: flex;
       @include breakpoint(xs-only){        
         justify-content: center;
         align-items: center;
@@ -352,10 +342,10 @@
         height: 100%;        
         background-color: transparent;        
         @include breakpoint(lg-down){ 
-          background-image: url('/src/static/img/fox_button-145.png'), url('/src/static/img/fox_button_hover-145.png'), url('/src/static/img/fox_button_pressed-145.png');
+          background-image: url('/src/static/img/fox_button-sm.png'), url('/src/static/img/fox_button_hover-sm.png'), url('/src/static/img/fox_button_pressed-sm.png');
         }
         @include breakpoint(xl){       
-          background-image: url('/src/static/img/fox_button-203.png'), url('/src/static/img/fox_button_hover-203.png'), url('/src/static/img/fox_button_pressed-203.png');
+          background-image: url('/src/static/img/fox_button-xl.png'), url('/src/static/img/fox_button_hover-xl.png'), url('/src/static/img/fox_button_pressed-xl.png');
         }
         background-repeat: no-repeat;
         background-position: 50% 100%;
@@ -441,20 +431,35 @@
             background-position: 50% 50%;
             background-size: contain, 0% 0%;
             will-change: background-image, background-size;
-            &.sign-1{
-              background-image: url('/src/static/img/redLight_off.png'),url('/src/static/img/redLight_on.png');
+            &.sign-1{              
+              @include breakpoint(lg-down){ 
+                background-image: url('/src/static/img/redlight_off-sm.png'),url('/src/static/img/redlight_on-sm.png');
+              }
+              @include breakpoint(xl){       
+                background-image: url('/src/static/img/redlight_off-xl.png'),url('/src/static/img/redlight_on-xl.png');
+              }
               &.active{                
                 background-size: 0% 0%, contain;          
               }
             }
-            &.sign-2{
-              background-image: url('/src/static/img/greenLight_off.png'),url('/src/static/img/greenLight_on.png');
+            &.sign-2{              
+              @include breakpoint(lg-down){ 
+                background-image: url('/src/static/img/greenlight_off-sm.png'),url('/src/static/img/greenlight_on-sm.png');
+              }
+              @include breakpoint(xl){       
+                background-image: url('/src/static/img/greenlight_off-xl.png'),url('/src/static/img/greenlight_on-xl.png');
+              }
               &.active{                
                 background-size: 0% 0%, contain;           
               }
             }
-            &.sign-3{
-              background-image: url('/src/static/img/yellowLight_off.png'),url('/src/static/img/yellowLight_on.png');
+            &.sign-3{              
+              @include breakpoint(lg-down){ 
+                background-image: url('/src/static/img/yellowlight_off-sm.png'),url('/src/static/img/yellowlight_on-sm.png');
+              }
+              @include breakpoint(xl){       
+                background-image: url('/src/static/img/yellowlight_off-xl.png'),url('/src/static/img/yellowlight_on-xl.png');
+              }
               &.active{                 
                 background-size: 0% 0%, contain;           
               }
@@ -555,8 +560,13 @@
           background-position: 50% 50%;
           background-size: contain, 0% 0%, 0% 0%;
           will-change: background-image, background-size;
-          &.btn-egg{
-            background-image: url('/src/static/img/button_egg.png'), url('/src/static/img/button_egg_hover.png'), url('/src/static/img/button_egg_pressed.png');
+          &.btn-egg{            
+            @include breakpoint(lg-down){ 
+              background-image: url('/src/static/img/button_egg-sm.png'), url('/src/static/img/button_egg_hover-sm.png'), url('/src/static/img/button_egg_pressed-sm.png');
+            }
+            @include breakpoint(xl){       
+              background-image: url('/src/static/img/button_egg-xl.png'), url('/src/static/img/button_egg_hover-xl.png'), url('/src/static/img/button_egg_pressed-xl.png');
+            }
             &:hover{              
               background-size: 0% 0%, contain, 0% 0%;              
             }
@@ -564,8 +574,13 @@
               background-size: 0% 0%, 0% 0%, contain; 
             }
           } 
-          &.btn-skull{
-            background-image: url('/src/static/img/Star_button.png'), url('/src/static/img/Star_button_hover.png'), url('/src/static/img/Star_button_pressed.png');            
+          &.btn-skull{            
+            @include breakpoint(lg-down){ 
+              background-image: url('/src/static/img/star_button-sm.png'), url('/src/static/img/star_button_hover-sm.png'), url('/src/static/img/star_button_pressed-sm.png');  
+            }
+            @include breakpoint(xl){       
+              background-image: url('/src/static/img/star_button-xl.png'), url('/src/static/img/star_button_hover-xl.png'), url('/src/static/img/star_button_pressed-xl.png');  
+            }         
             &:hover{              
               background-size: 0% 0%, contain, 0% 0%;              
             }
@@ -626,12 +641,12 @@
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: cover;   
-      background-image: url('/src/static/img/background_midsection_medium-375.jpg'); 
+      background-image: url('/src/static/img/background_midsection_medium-sm.jpg'); 
       @include breakpoint(sm){
-        background-image: url('/src/static/img/background_midsection_medium-1350.jpg'); 
+        background-image: url('/src/static/img/background_midsection_medium-xl.jpg'); 
       }
       @media screen and (min-width: 1440px){
-        background-image: url('/src/static/img/background_midsection_large-1350.jpg'); 
+        background-image: url('/src/static/img/background_midsection_large-xl.jpg'); 
         background-size: 100% 100%;
       }        
     }
@@ -722,10 +737,10 @@
         background-color: transparent;        
         
         @include breakpoint(lg-down){ 
-          background-image: url('/src/static/img/button_base-360.png');
+          background-image: url('/src/static/img/button_base-sm.png');
         }
         @include breakpoint(xl){       
-          background-image: url('/src/static/img/button_base-486.png');
+          background-image: url('/src/static/img/button_base-xl.png');
         }
         background-repeat: no-repeat;
         background-position: 50% 100%;
@@ -756,10 +771,10 @@
         height: 100%;        
         background-color: transparent; 
         @include breakpoint(lg-down){ 
-          background-image: url('/src/static/img/mainbutton_default-200.png'),url('/src/static/img/mainbutton_hover-200.png'),url('/src/static/img/mainbutton_pressed-200.png');
+          background-image: url('/src/static/img/mainbutton_default-sm.png'),url('/src/static/img/mainbutton_hover-sm.png'),url('/src/static/img/mainbutton_pressed-sm.png');
         }
         @include breakpoint(xl){       
-          background-image: url('/src/static/img/mainbutton_default-272.png'),url('/src/static/img/mainbutton_hover-272.png'),url('/src/static/img/mainbutton_pressed-272.png');
+          background-image: url('/src/static/img/mainbutton_default-xl.png'),url('/src/static/img/mainbutton_hover-xl.png'),url('/src/static/img/mainbutton_pressed-xl.png');
         }
         background-repeat: no-repeat;
         background-position: 50% 100%;
@@ -946,13 +961,15 @@
       background-color: transparent;          
       background-repeat: no-repeat;
       background-position: 50% 50%;
-      background-size: cover;   
-      background-image: url('/src/static/img/background_bottomsection_medium-375.jpg'); 
+      background-size: cover;  
+      @include breakpoint(lg-down){ 
+        background-image: url('/src/static/img/background_bottomsection_medium-sm.jpg'); 
+      }
       @include breakpoint(xl){
-        background-image: url('/src/static/img/background_bottomsection_medium-1350.jpg');
+        background-image: url('/src/static/img/background_bottomsection_medium-xl.jpg');
       }  
       @media screen and (min-width: 1440px){
-        background-image: url('/src/static/img/background_bottomsection_large-1350.jpg');  
+        background-image: url('/src/static/img/background_bottomsection_large-xl.jpg');  
         background-size: 100% 100%;
       }
     }    

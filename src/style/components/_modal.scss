@@ -52,8 +52,13 @@ body.vanilla-modal{
   @include breakpoint(md){
     width: 600px; 
     height: 415px;   
+  }  
+  @include breakpoint(lg-down){ 
+    background-image: url('/src/static/img/popup-sm.png');
   }
-  background-image: url('/src/static/img/popup.png');
+  @include breakpoint(xl){
+    background-image: url('/src/static/img/popup-xl.png');
+  }
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
@@ -142,11 +147,21 @@ body.vanilla-modal{
       background-size: 0% 0%, 0% 0%, contain;
     }    
   }
-  .btn-q-down{
-    background-image: url('/src/static/img/btn_rest_default .png'), url('/src/static/img/btn_rest_hover.png'), url('/src/static/img/btn_rest_pressed.png');
+  .btn-q-down{    
+    @include breakpoint(lg-down){ 
+      background-image: url('/src/static/img/btn_rest_default-sm.png'), url('/src/static/img/btn_rest_hover-sm.png'), url('/src/static/img/btn_rest_pressed-sm.png');
+    }
+    @include breakpoint(xl){
+      background-image: url('/src/static/img/btn_rest_default-xl.png'), url('/src/static/img/btn_rest_hover-xl.png'), url('/src/static/img/btn_rest_pressed-xl.png');
+    }  
   }
-  .btn-q-up{
-    background-image: url('/src/static/img/btn_plus_default.png'), url('/src/static/img/btn_plus_hover.png'), url('/src/static/img/btn_plus_pressed.png');
+  .btn-q-up{    
+    @include breakpoint(lg-down){ 
+      background-image: url('/src/static/img/btn_plus_default-sm.png'), url('/src/static/img/btn_plus_hover-sm.png'), url('/src/static/img/btn_plus_pressed-sm.png');
+    }
+    @include breakpoint(xl){
+      background-image: url('/src/static/img/btn_plus_default-xl.png'), url('/src/static/img/btn_plus_hover-xl.png'), url('/src/static/img/btn_plus_pressed-xl.png');
+    } 
   }
   .input-box{
     flex: 0 0 auto;
@@ -166,8 +181,13 @@ body.vanilla-modal{
       font-family: $global-font-family;
       font-size: 16px;
       width: 100%;
-      height: 40px;
-      background: url('/src/static/img/blank_square.png') no-repeat 50% 50%/100% 100%;
+      height: 40px;      
+      @include breakpoint(lg-down){ 
+        background: url('/src/static/img/blank_square-sm.png') no-repeat 50% 50%/100% 100%;
+      }
+      @include breakpoint(xl){
+        background: url('/src/static/img/blank_square-xl.png') no-repeat 50% 50%/100% 100%;
+      }
       @include breakpoint(sm){
         padding: 4px 5px;
         height: 60px; 
@@ -223,8 +243,13 @@ body.vanilla-modal{
     background-color: transparent;   
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: 100% 100%, 0% 0%, 0% 0%;
-    background-image: url('/src/static/img/gree_button_default.png'), url('/src/static/img/green_button_hover.png'), url('/src/static/img/green_button_pressed.png');
+    background-size: 100% 100%, 0% 0%, 0% 0%;    
+    @include breakpoint(lg-down){ 
+      background-image: url('/src/static/img/gree_button_default-sm.png'), url('/src/static/img/green_button_hover-sm.png'), url('/src/static/img/green_button_pressed-sm.png');
+    }
+    @include breakpoint(xl){
+      background-image: url('/src/static/img/gree_button_default-xl.png'), url('/src/static/img/green_button_hover-xl.png'), url('/src/static/img/green_button_pressed-xl.png');
+    }
     will-change: background-image, background-size;
     &:hover{
       background-size: 0% 0%, 100% 100%, 0% 0%;
@@ -258,8 +283,13 @@ body.vanilla-modal{
     right: 28px;
   }
 
-  background-color: transparent;  
-  background-image: url('/src/static/img/btn_close_default.png'), url('/src/static/img/btn_close_hover.png'), url('/src/static/img/btn_close_pressed.png');
+  background-color: transparent;    
+  @include breakpoint(lg-down){ 
+    background-image: url('/src/static/img/btn_close_default-sm.png'), url('/src/static/img/btn_close_hover-sm.png'), url('/src/static/img/btn_close_pressed-sm.png');
+  }
+  @include breakpoint(xl){
+    background-image: url('/src/static/img/btn_close_default-xl.png'), url('/src/static/img/btn_close_hover-xl.png'), url('/src/static/img/btn_close_pressed-xl.png');
+  }
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain, 0% 0%, 0% 0%;
