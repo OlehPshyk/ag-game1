@@ -1,33 +1,37 @@
 const interactiveCdb = () => {  
-  // TOP
-  const resolveCdbTop = (event) => {
-    const tg1Btn = event.target.closest('[data-id="tg1-btn"]');    
-    if(tg1Btn){
-      tg1Btn.classList.toggle('active');
-    }    
-  }
-  let topCdb = document.querySelector('.js-cdb-top');
-  topCdb&&topCdb.addEventListener('click', resolveCdbTop);
+  // TOP 
 
-  const attentionLamp = document.querySelector('[data-attention-lamp]');
-  const activateAttentionLamp = () => {
-    if(attentionLamp){
-      attentionLamp.classList.toggle('active');
+  if(document.body.clientWidth>=576){
+    const resolveCdbTop = (event) => {
+      const tg1Btn = event.target.closest('[data-id="tg1-btn"]');    
+      if(tg1Btn){
+        tg1Btn.classList.toggle('active');
+      }    
     }
-  }
-  setInterval(activateAttentionLamp, 1000);
+    let topCdb = document.querySelector('.js-cdb-top');
+    topCdb&&topCdb.addEventListener('click', resolveCdbTop);
 
-  const hoverLinks = document.querySelectorAll('[data-hover-link]');
-  const activateLamp = (e) => {
-    document.querySelector(`[data-link-lamp="${e.target.dataset.hoverLink}"]`).classList.add('active');
+    const attentionLamp = document.querySelector('[data-attention-lamp]');
+    const activateAttentionLamp = () => {
+      if(attentionLamp){
+        attentionLamp.classList.toggle('active');
+      }
+    }
+    setInterval(activateAttentionLamp, 1000);
+    const hoverLinks = document.querySelectorAll('[data-hover-link]');
+    const activateLamp = (e) => {
+      document.querySelector(`[data-link-lamp="${e.target.dataset.hoverLink}"]`).classList.add('active');
+    }
+    const deactivateLamp = (e) => {
+      document.querySelector(`[data-link-lamp="${e.target.dataset.hoverLink}"]`).classList.remove('active');
+    }  
+    [...hoverLinks].map(el=>el.addEventListener("mouseover", activateLamp));
+    [...hoverLinks].map(el=>el.addEventListener("focus", activateLamp));
+    [...hoverLinks].map(el=>el.addEventListener("mouseleave", deactivateLamp));
+    [...hoverLinks].map(el=>el.addEventListener("blur", deactivateLamp));
   }
-  const deactivateLamp = (e) => {
-    document.querySelector(`[data-link-lamp="${e.target.dataset.hoverLink}"]`).classList.remove('active');
-  }  
-  [...hoverLinks].map(el=>el.addEventListener("mouseover", activateLamp));
-  [...hoverLinks].map(el=>el.addEventListener("focus", activateLamp));
-  [...hoverLinks].map(el=>el.addEventListener("mouseleave", deactivateLamp));
-  [...hoverLinks].map(el=>el.addEventListener("blur", deactivateLamp));
+
+  
 
   // MEDIUM
   const g2Btn = document.querySelector('.js-g2-btn');
