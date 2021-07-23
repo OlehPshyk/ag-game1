@@ -32,8 +32,12 @@
     <div class="second-section">
       <div class="fog"></div>
       <div class="wrapper">
-        <div class="img-wrapper">
-          <img class="second-img" src="./static/img/Landscape_02_Animation.gif" alt="tree">
+        <div class="img-wrapper">          
+          <picture>
+            <source media="(max-width: 1199px)" srcset="./static/img/trees-sm.gif" type="image/gif">
+            <source media="(min-width: 1200px)" srcset="./static/img/trees-xl.gif" type="image/gif">
+            <img class="second-img" src="./static/img/trees-xl.gif" alt="trees">
+          </picture>
         </div>
         <div class="second-text">
           <p>
@@ -53,7 +57,7 @@
           </p>
         </div>
         <div class="nav-wrapper">
-          <img class="nav-img" src="./static/img/woodenSign.png" alt="nav">
+          <img class="nav-img" src="./static/img/woodensign.png" alt="nav">
           <a class="nav1" href="#">OpenSea</a>
           <a class="nav2" href="../">Home</a> <!--change to /-->
         </div>
