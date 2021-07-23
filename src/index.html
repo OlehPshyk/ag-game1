@@ -80,11 +80,11 @@
                 <div class="lblock-item tg1-3">
                   <div class="anime-wrapper">
                     <div class="anime-asp-box">                                                  
-                      <video autoplay loop muted playsinline class="tg1-3-anime">                        
+                      <video autoplay loop muted playsinline controls class="tg1-3-anime">                        
                         <source media="(max-width: 1199px)" src="./static/img/radar-newspeed-sm.mp4" type="video/mp4" width='135' height='169'>
                         <source media="(min-width: 1200px)" src="./static/img/radar-newspeed-xl.mp4" type="video/mp4" width='324' height='405'>
-                        <source media="(max-width: 1199px)" src="./static/img/radar-newspeed-sm.webm" type="video/webm" width='135' height='169'>
-                        <source media="(min-width: 1200px)" src="./static/img/radar-newspeed-xl.webm" type="video/webm" width='324' height='405'>
+                        <!-- <source media="(max-width: 1199px)" src="./static/img/radar-newspeed-sm.webm" type="video/webm" width='135' height='169'>
+                        <source media="(min-width: 1200px)" src="./static/img/radar-newspeed-xl.webm" type="video/webm" width='324' height='405'> -->
                         Your browser does not support the video tag.                      
                       </video>           
                     </div> 
@@ -431,13 +431,7 @@
         <div class="modal-content"></div>
       </div>
     </div>
-<script>
-  // for Safari
-  var allVideos = document.querySelectorAll('video');
-  for (var i = 0; i < allVideos.length; i++) {
-      allVideos[i].play();
-  }
-</script>
+
 <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
