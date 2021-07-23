@@ -350,8 +350,13 @@
         left: 0;
         width: 100%;
         height: 100%;        
-        background-color: transparent;
-        background-image: url('/src/static/img/Fox_button.png'), url('/src/static/img/Fox_button_hover.png'), url('/src/static/img/Fox_button_pressed.png');
+        background-color: transparent;        
+        @include breakpoint(lg-down){ 
+          background-image: url('/src/static/img/fox_button-145.png'), url('/src/static/img/fox_button_hover-145.png'), url('/src/static/img/fox_button_pressed-145.png');
+        }
+        @include breakpoint(xl){       
+          background-image: url('/src/static/img/fox_button-203.png'), url('/src/static/img/fox_button_hover-203.png'), url('/src/static/img/fox_button_pressed-203.png');
+        }
         background-repeat: no-repeat;
         background-position: 50% 100%;
         background-size: 100% auto, 0% 0%, 0% 0%;
@@ -375,7 +380,7 @@
         font-size: 12px; 
         @include breakpoint(sm){
           font-size: 1.2vw;
-          top: 50%;
+          top: 52%;
         }
         @media screen and (min-width: 1440px){
           font-size: 17px; 
