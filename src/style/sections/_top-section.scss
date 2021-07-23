@@ -304,11 +304,8 @@
         padding: 0 3%;
         justify-content: flex-end;
         align-items: flex-end;
-        height: 16%;
-      }
-      @media screen and (min-width: 1440px){
-        height: 21%;
-      }
+        height: 17%;
+      }      
      
       .btn-wrapper{
         @include breakpoint(xs-only){
@@ -597,7 +594,7 @@
         flex: 1 1 auto;
         display: flex;
         padding: 0 3%;
-        height: 19%;
+        height: 18%;
         justify-content: flex-start;
         align-items: center;
       }
