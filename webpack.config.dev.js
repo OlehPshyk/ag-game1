@@ -8,7 +8,7 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map(
   dir => new HTMLWebpackPlugin({
     filename: path.basename(dir), // Output
     template: dir, // Input
-    inject: true,
+    inject: false,
   }),
 );
 module.exports = merge(common, {
