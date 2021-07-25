@@ -120,8 +120,8 @@
                 </div>
                 <script>                  
                   if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-                    document.querySelectorAll('.video-safari-change').map(function(el){return el.style.display= "none"});
-                    document.querySelectorAll('.gif-safari-change').map(function(el){return el.style.display= "block"});
+                    Array.from(document.querySelectorAll('.video-safari-change')).map(function(el){return el.style.display= "none"});
+                    Array.from(document.querySelectorAll('.gif-safari-change')).map(function(el){return el.style.display= "block"});
                   }
                 </script> 
                 <div class="counter-wrapper">
