@@ -40,11 +40,15 @@
                 <div class="lblock-item tg1-1">
                   <div class="anime-wrapper">
                     <div class="anime-asp-box">                      
-                      <video autoplay loop muted playsinline disableremoteplayback class="tg1-1-anime" poster="./static/img/scrolling-text-1.png">
+                      <video autoplay loop muted playsinline disableremoteplayback class="tg1-1-anime video-safari-change" poster="./static/img/scrolling-text-1.png">
                         <source src="./static/img/scrolling-text-837.webm" type="video/webm" width='279' height='73'>
                         <source src="./static/img/scrolling-text-837.mp4" type="video/mp4" width='279' height='73'>
                         Your browser does not support the video tag.                
                       </video> 
+                      <picture class="tg1-1-anime gif-safari-change" style="display:none;">
+                        <source media="(max-width: 1199px)" srcset="./static/img/scrolling-text-837.gif" type="image/gif">                        
+                        <img src="./static/img/scrolling-text-837.gif" alt="scrolling">
+                      </picture>  
                     </div>
                   </div>
                   <div class="sign-wrapper">
@@ -80,13 +84,18 @@
                 <div class="lblock-item tg1-3">
                   <div class="anime-wrapper">
                     <div class="anime-asp-box">                                                  
-                      <video autoplay loop muted playsinline disableremoteplayback class="tg1-3-anime" poster="./static/img/radar-newspeed-1.png">                           
+                      <video autoplay loop muted playsinline disableremoteplayback class="tg1-3-anime video-safari-change" poster="./static/img/radar-newspeed-1.png">                           
                         <source media="(max-width: 1199px)" src="./static/img/radar-newspeed-sm-405.webm" type="video/webm" width='135' height='169'>   
                         <source media="(max-width: 1199px)" src="./static/img/radar-newspeed-sm-405.mp4" type="video/mp4" width='135' height='169'>                         
                         <source media="(min-width: 1200px)" src="./static/img/radar-newspeed-xl-972.webm" type="video/webm" width='324' height='405'>                                               
                         <source media="(min-width: 1200px)" src="./static/img/radar-newspeed-xl-972.mp4" type="video/mp4" width='324' height='405'>                         
                         Your browser does not support the video tag.                      
-                      </video>           
+                      </video>
+                      <picture class="tg1-3-anime gif-safari-change" style="display:none;">
+                        <source media="(max-width: 1199px)" srcset="./static/img/radar-newspeed-sm-405.gif" type="image/gif">
+                        <source media="(min-width: 1200px)" srcset="./static/img/radar-newspeed-xl-972.gif" type="image/gif">
+                        <img src="./static/img/radar-newspeed-xl-972.gif" alt="radar">
+                      </picture>           
                     </div> 
                   </div>
                 </div>
@@ -95,15 +104,26 @@
               <div class="tg2">
                 <div class="anime-wrapper">
                   <div class="anime-asp-box"> 
-                    <video autoplay loop muted playsinline disableremoteplayback class="tg2-anime" poster="./static/img/screen-1.png">                      
+                    <video autoplay loop muted playsinline disableremoteplayback class="tg2-anime video-safari-change" poster="./static/img/screen-1.png">                      
                       <source media="(max-width: 1199px)" src="./static/img/screen-sm-675.webm" type="video/webm" width='225' height='225'>
                       <source media="(max-width: 1199px)" src="./static/img/screen-sm-675.mp4" type="video/mp4" width='225' height='225'>                      
                       <source media="(min-width: 1200px)" src="./static/img/screen-xl-1257.webm" type="video/webm" width='419' height='419'>                      
                       <source media="(min-width: 1200px)" src="./static/img/screen-xl-1257.mp4" type="video/mp4" width='419' height='419'>
                       Your browser does not support the video tag.                      
                     </video>
+                    <picture class="tg2-anime gif-safari-change" style="display:none;">
+                      <source media="(max-width: 1199px)" srcset="./static/img/screen-sm-675.gif" type="image/gif">
+                      <source media="(min-width: 1200px)" srcset="./static/img/screen-xl-1257.gif" type="image/gif">
+                      <img src="./static/img/screen-xl-1257.gif" alt="screen">
+                    </picture>   
                   </div> 
-                </div> 
+                </div>
+                <script>                  
+                  if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+                    document.querySelectorAll('.video-safari-change').map(function(el){return el.style.display= "none"});
+                    document.querySelectorAll('.gif-safari-change').map(function(el){return el.style.display= "block"});
+                  }
+                </script> 
                 <div class="counter-wrapper">
                   <div class="counter-asp-box">
                     <picture>
