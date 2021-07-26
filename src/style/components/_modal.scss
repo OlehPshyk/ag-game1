@@ -40,7 +40,7 @@ body.vanilla-modal{
   // .btn-modal-close{}  
 }
  
-.popup-1{
+.popup{
   padding: 0;
   position: relative;
   width: 300px; 
@@ -68,7 +68,7 @@ body.vanilla-modal{
     left: 14%;
     width: 64%;
     height: 36%;
-    #m-t1{
+    #m-t1,#m-t3{
       color: #35BE6B;
       font-family: $global-font-family;
       @include breakpoint(xs-only){
@@ -82,7 +82,7 @@ body.vanilla-modal{
       }
       line-height: 1.3;
     }
-    #m-t2{
+    #m-t2,#m-t4{
       position: absolute;
       top: 92%;
       right: 10%;
@@ -101,7 +101,7 @@ body.vanilla-modal{
     }
   }
 }
-.popup-1-form{
+.popup-form{
   position: absolute;
   margin: 0 auto;
   width: 80%;
@@ -259,7 +259,7 @@ body.vanilla-modal{
     }
   }  
 }
-.btn-popup-1-close{
+.btn-popup-close{
   @include outline(0);
   cursor: pointer;
   border: none;
