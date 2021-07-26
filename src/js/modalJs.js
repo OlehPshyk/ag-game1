@@ -208,16 +208,16 @@ const modalJs = () => {
   }
   const sendMintForm1 = (e) => {
     e.preventDefault();    
-    let qMint = e.target.querySelector('[data-q]').value;
-    console.log("quantity Mint:",qMint);
-    console.log("total Mint:",total1);
+    // let qMint = e.target.querySelector('[data-q]').value;
+    // console.log("quantity Mint:",qMint);
+    // console.log("total Mint:",total1);
     updateURL('thanks');
   }
   const sendMintForm2 = (e) => {
     e.preventDefault();    
-    let qMint = e.target.querySelector('[data-q]').value;
-    console.log("quantity Mint:",qMint);
-    console.log("total Mint:",total2);
+    // let qMint = e.target.querySelector('[data-q]').value;
+    // console.log("quantity Mint:",qMint);
+    // console.log("total Mint:",total2);
     updateURL('thanks');
   }
   
